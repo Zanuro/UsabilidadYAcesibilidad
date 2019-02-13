@@ -97,9 +97,9 @@ Realiza un informe en el que indiques:
     .html-tag {
       color: rgb(136, 18, 128);}
 
-10. Primera pagina: '<a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a>'
+10. Primera pagina: #<a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a>
 
-    Segunda pagina: '<span class="html-tag">
+    Segunda pagina: #<span class="html-tag">
                     "<operations:operation"
 		   <span class="html-attribute">
 			<span class="html-attribute-name">kind></span>
@@ -109,4 +109,4 @@ Realiza un informe en el que indiques:
 			   """
 			   </span>
 			    ">"
-			   </span>'
+			   </span>
