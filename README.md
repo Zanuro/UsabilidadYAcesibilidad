@@ -19,15 +19,15 @@ Entra en las páginas: http://www.gobiernodecanarias.org/istac/api/ https://www3
 Realiza un informe en el que indiques:
 
 1.Qué peticiones desencadena la consulta.<br />
-	En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,otra petición HTTP GET istac.css,logo_stac.jpg,logo_edatos.jpg, y luego devolvera estos.<br />
+	En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,a partir de esta se generan todas las demas peticiones HTTP GET(istac.css,logo_stac.jpg,logo_edatos.jpg), y luego devolvera la respuesta con los datos pedidos a estas peticiones.<br />
 	En la pagina 2 se realiza una peticion de tipo HTTP GET para operations?limit=5 que contendra todo lo que aparece en el contenido es decir codigo XML, y luego una peticion GET a data:image/svg+xml, para obtener la imagen svg de la flecha que se utiliza al desplegar el codigo XML.<br />
 	
 2.¿Qué tipo de petición estás realizando? <br />
-	En la pagina 1 se realiza una peticion de tipo GET para obtener la estructura HTML de la pagina,el css de la pagina y las images de tipo jpg.<br />
+	En la pagina 1 se realiza una peticion de tipo GET para obtener los datos de la página.<br />
 	En la pagina 2 se reliaza una peticion de tipo GET para obtener la estructura XML,y otra para obtener un svg utilizado en el xml.<br />
 	
 3.Qué código de estatus devuelve.<br />
-	En la pagina 1 :la peticion a api/ devuelve el valor 200 OK,la peticion al fichero .css y las imagenes primero devuelven found(302) y luego otra peticion de OK con valor 200.<br />
+	En la pagina 1 :la peticion a api/ devuelve el valor 200 OK pero cuando se recarga la recupera de la caché que devuelve Not Modified(304),la peticion al fichero .css y las imagenes primero devuelven found(302) y luego las respuestas a estas peticiones devuelven otra peticion de OK con valor 200.<br />
 	En la pagina 2 :las dos peticiones tanto a la obtencion del xml como la imagen svg del xml devuelven el valor 200 de OK.<br />
 	
 4.Qué DNS tiene el servidor.<br />
@@ -35,19 +35,19 @@ Realiza un informe en el que indiques:
 	En la segunda pagina: www3.gobiernodecanarias.org <br />
 
 5.Qué IP tiene tiene el servidor.<br />
-	En la primera pagina: 93.188.137.123:80 para la pagina principal,la peticion de css,y jpg,y el codigo de css y las images se obtienen del 93.188.137.123:443,mientras que el font-awesome.min.css se obtiene del 104.19.195.151:443.<br />
+	En la primera pagina: 93.188.137.123:80 para la peticion del fichero que desencadena las demas peticiones,las respuestas con el codigo de css y las images se obtienen del 93.188.137.123:443,mientras que el font-awesome.min.css se obtiene del 104.19.195.151:443.<br />
 	En la segunda pagina: 93.188.137.126:443 para la obtencion del xml y del svg del xml.<br />
 	
 6.¿La página tiene alguna cookie?, ¿Cuáles?.<br />
-	La primera pagina: Si,tiene una que se llama __cfduid con un valor de:ddf3600caeb2240e1fb273d9dd964ac231545067476,con dominio:.cloudflare.com,y expiry date es 17-12-2019, con la ruta: /istac/api/structural-resources. <br />
+	La primera pagina: Si,tiene una que se llama __cfduid con un valor de: ddf3600caeb2240e1fb273d9dd964ac231545067476, con dominio:.cloudflare.com,y expiry date es 17-12-2019, con la ruta: /istac/api/structural-resources, tamaño de 51 bytes. <br />
 
    La segunda pagina:No tiene ningun cookie guardado en la memoria.<br />
 
 7.¿Qué idioma acepta?.<br />
 	En la pagina 1: en-US,en;q=0.9,es;q=0.8,es decir se acepta el ingles de Estados Unidos con un nivel de 'aceptacion' de 0.9(con un orden de preferencia superior/peso) pero tambien el espanol al 0.8(tambien aceptado aunque tiene un orden de preferencia menor que el ingles). <br />
-	En la pagina 2: en-US,en;q=0.9,es;q=0.8,igual que en la primera pagina se acepta tanto el ingles de Estados Unidos con un peso de 0.9, es decir tiene una preferencia superior a los otros, pero tambien el espanol aunque el nivel de preferencia es un poco menor, de solo 0.8.<br />
+	En la pagina 2: en-US,en;q=0.5,se acepta el ingles de Estados Unidos con un peso de 0.5, es decir tiene una preferencia superior a los otros.<br />
 8.Alguna línea de código JavaScript. <br />
-	Como tal la pagina no tiene funcionalidades de js, pero si pulsamos sobre los titulos se realizan peticiones de jquery y js:
+	La pagina original no tiene funcionalidades de Javascript, pero si pulsamos sobre los titulos se realizan peticiones de jquery y js como esta:
   
    	'window.SwaggerTranslator = {
 
@@ -85,7 +85,8 @@ Realiza un informe en el que indiques:
 	  .html-tag {
              color: rgb(136, 18, 128);} <br />
 10.Alguna línea de código HTML que se aplique. <br />
- 	Primera pagina: #<a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a> <br />
+ 	
+	Primera pagina: <a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a>
 	Segunda pagina: #<span class="html-tag">
         	"<operations:operation"
 		<span class="html-attribute">
