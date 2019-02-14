@@ -1,4 +1,4 @@
-DSI SEMINARIO DCU
+# DSI SEMINARIO DCU
 Realizar la lectura del documento: "La fábula del diseñador centrado en el usuario" (https://www.userfocus.co.uk/fable/index.html)
  
 1.Definir las tareas que se llevarán a cabo en la fase de investigación y diseño conceptual de la aplicación "Club de Lectura".
@@ -12,7 +12,7 @@ Realizar la lectura del documento: "La fábula del diseñador centrado en el usu
 2.Definir en el documento los personajes y perfiles de usuario que vayan a usar tu producto y la especificación de requisitos.
 	
 
-Practica-Introduccion al protocolo HTTP.
+# Practica-Introduccion al protocolo HTTP.
 
 Entra en las páginas: http://www.gobiernodecanarias.org/istac/api/ https://www3.gobiernodecanarias.org/istac/api/operations/v1.0/operations?limit=5 y utiliza los navegadores Chrome y Firefox para resolver las siguientes cuestiones:
 
