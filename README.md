@@ -19,7 +19,7 @@ Entra en las páginas: http://www.gobiernodecanarias.org/istac/api/ https://www3
 Realiza un informe en el que indiques:
 
 1.Qué peticiones desencadena la consulta.<br />
-	En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,istac.css,logo_stac.jpg,logo_edatos.jpg, y luego devolvera estos.<br />
+	En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,otra petición HTTP GET istac.css,logo_stac.jpg,logo_edatos.jpg, y luego devolvera estos.<br />
 	En la pagina 2 se realiza una peticion de tipo HTTP GET para operations?limit=5 que contendra todo lo que aparece en el contenido es decir codigo XML, y luego una peticion GET a data:image/svg+xml, para obtener la imagen svg de la flecha que se utiliza al desplegar el codigo XML.<br />
 	
 2.¿Qué tipo de petición estás realizando? <br />
@@ -27,7 +27,7 @@ Realiza un informe en el que indiques:
 	En la pagina 2 se reliaza una peticion de tipo GET para obtener la estructura XML,y otra para obtener un svg utilizado en el xml.<br />
 	
 3.Qué código de estatus devuelve.<br />
-	En la pagina 1 :la peticion a api/ devuelve el valor 304 Not Modified,la peticion al fichero .css y las imagenes primero devuelven found(302) y luego otra peticion de OK con valor 200.<br />
+	En la pagina 1 :la peticion a api/ devuelve el valor 200 OK,la peticion al fichero .css y las imagenes primero devuelven found(302) y luego otra peticion de OK con valor 200.<br />
 	En la pagina 2 :las dos peticiones tanto a la obtencion del xml como la imagen svg del xml devuelven el valor 200 de OK.<br />
 	
 4.Qué DNS tiene el servidor.<br />
