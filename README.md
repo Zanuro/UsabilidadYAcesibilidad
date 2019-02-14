@@ -19,6 +19,9 @@ Entra en las páginas: http://www.gobiernodecanarias.org/istac/api/ https://www3
 Realiza un informe en el que indiques:
 
 1.Qué peticiones desencadena la consulta.<br />
+	En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,istac.css,logo_stac.jpg,logo_edatos.jpg, y luego devolvera estos.
+
+  	En la pagina 2 se realiza una peticion de tipo HTTP GET para operations?limit=5 que contendra todo lo que aparece en el contenido es decir codigo XML, y luego una peticion GET a data:image/svg+xml, para obtener la imagen svg de la flecha que se utiliza al desplegar el codigo XML.
 2.¿Qué tipo de petición estás realizando? <br />
 3.Qué código de estatus devuelve.<br />
 4.Qué DNS tiene el servidor.<br />
