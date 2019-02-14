@@ -49,31 +49,32 @@ Realiza un informe en el que indiques:
 8.Alguna línea de código JavaScript. <br />
 	Como tal la pagina no tiene funcionalidades de js, pero si pulsamos sobre los titulos se realizan peticiones de jquery y js:
   
-   'window.SwaggerTranslator = {
+   	'window.SwaggerTranslator = {
 
-    _words:[],
+   		 _words:[],
 
-    translate: function(sel) {
-      var $this = this;
-      sel = sel || '[data-sw-translate]';
+   		 translate: function(sel) {
+    		  var $this = this;
+      		  sel = sel || '[data-sw-translate]';
 
-      $(sel).each(function() {
-        $(this).html($this._tryTranslate($(this).html()));
+     		 $(sel).each(function() {
+       		   $(this).html($this._tryTranslate($(this).html()));
 
-        $(this).val($this._tryTranslate($(this).val()));
-        $(this).attr('title', $this._tryTranslate($(this).attr('title')));
-      });
-    },
+        	   $(this).val($this._tryTranslate($(this).val()));
+       		   $(this).attr('title', $this._tryTranslate($(this).attr('title')));
+      		   });
+    		 },
 
-    _tryTranslate: function(word) {
-      return this._words[$.trim(word)] !== undefined ? this._words[$.trim(word)] : word;
-    },
+   		 _tryTranslate: function(word) {
+      		     return this._words[$.trim(word)] !== undefined ? this._words[$.trim(word)] : word;
+    		 },
 
-    learn: function(wordsMap) {
-      this._words = wordsMap;
-    }
-  };' <br />
-   	La segunda pagina no tiene funcionalidades propias de javascript.<br />
+    		learn: function(wordsMap) {
+		    this._words = wordsMap;
+   		 }
+ 	 };' <br />
+   	
+   La segunda pagina no tiene funcionalidades propias de javascript.<br />
 9.Alguna línea de código CSS que se aplique. <br />
 	Primera pagina:
     	  .section h2 a {
@@ -84,7 +85,7 @@ Realiza un informe en el que indiques:
 	  .html-tag {
              color: rgb(136, 18, 128);} <br />
 10.Alguna línea de código HTML que se aplique. <br />
- #	Primera pagina: #<a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a> <br />
+ 	Primera pagina: #<a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a> <br />
 	Segunda pagina: #<span class="html-tag">
         	"<operations:operation"
 		<span class="html-attribute">
@@ -95,14 +96,4 @@ Realiza un informe en el que indiques:
 				"""
 	   		</span>
 	    		">"
-	   	</span>
-6. 
-
-
-
-
-
- 
-
-
-10. 
+	   	</span> 
