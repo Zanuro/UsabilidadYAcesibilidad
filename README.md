@@ -18,16 +18,16 @@ Entra en las páginas: http://www.gobiernodecanarias.org/istac/api/ https://www3
 
 Realiza un informe en el que indiques:
 
-1.Qué peticiones desencadena la consulta.
-2.¿Qué tipo de petición estás realizando?
-3.Qué código de estatus devuelve.
-4.Qué DNS tiene el servidor
-5.Qué IP tiene tiene el servidor
-6.¿La página tiene alguna cookie?, ¿Cuáles?.
-7.¿Qué idioma acepta?.
-8.Alguna línea de código JavaScript
-9.Alguna línea de código CSS que se aplique
-10.Alguna línea de código HTML que se aplique.
+1.Qué peticiones desencadena la consulta.<br />
+2.¿Qué tipo de petición estás realizando? <br />
+3.Qué código de estatus devuelve.<br />
+4.Qué DNS tiene el servidor.<br />
+5.Qué IP tiene tiene el servidor.<br />
+6.¿La página tiene alguna cookie?, ¿Cuáles?.<br />
+7.¿Qué idioma acepta?.<br />
+8.Alguna línea de código JavaScript. <br />
+9.Alguna línea de código CSS que se aplique. <br />
+10.Alguna línea de código HTML que se aplique. <br />
 
 1.En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,istac.css,logo_stac.jpg,logo_edatos.jpg, y luego devolvera estos.
 
