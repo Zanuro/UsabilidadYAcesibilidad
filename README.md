@@ -20,7 +20,7 @@ Realiza un informe en el que indiques:
 
 1.Qué peticiones desencadena la consulta.<br />
 	En la pagina 1 se realiza una peticion de tipo HTTP GET para la api/,a partir de esta se generan todas las demas peticiones HTTP GET(istac.css,logo_stac.jpg,logo_edatos.jpg), y luego devolvera la respuesta con los datos pedidos a estas peticiones.<br />
-	En la pagina 2 se realiza una peticion de tipo HTTP GET para operations?limit=5 que contendra todo lo que aparece en el contenido es decir codigo XML, y luego una peticion GET a data:image/svg+xml, para obtener la imagen svg de la flecha que se utiliza al desplegar el codigo XML.<br />
+	En la pagina 2 se realiza una peticion de tipo HTTP GET a operations?limit=5 que contendra todo lo que aparece en el contenido es decir codigo "XML", y luego una peticion GET a data:image/svg+xml, para obtener la imagen svg de la flecha que se utiliza al desplegar el codigo XML.<br />
 	
 2.¿Qué tipo de petición estás realizando? <br />
 	En la pagina 1 se realiza una peticion de tipo GET para obtener los datos de la página.<br />
@@ -41,7 +41,8 @@ Realiza un informe en el que indiques:
 6.¿La página tiene alguna cookie?, ¿Cuáles?.<br />
 	La primera pagina: Si,tiene una que se llama __cfduid con un valor de: ddf3600caeb2240e1fb273d9dd964ac231545067476, con dominio:.cloudflare.com,y expiry date es 17-12-2019, con la ruta: /istac/api/structural-resources, tamaño de 51 bytes. <br />
 
-   La segunda pagina:No tiene ningun cookie guardado en la memoria.<br />
+   La segunda pagina: tiene tres, la primera se llama __gat con valor 1, la segunda _ga con un array de cuatro elementos con valor "GA1", "2", "1641980567" y "1544664951", y la tercera se llama _gid y su contenido es otro array de tamaño cuatro con los valores  "GA1" ,  “2”,  "1270768101" y  "1544664951".<br />
+
 
 7.¿Qué idioma acepta?.<br />
 	En la pagina 1: en-US,en;q=0.9,es;q=0.8,es decir se acepta el ingles de Estados Unidos con un nivel de 'aceptacion' de 0.9(con un orden de preferencia superior/peso) pero tambien el espanol al 0.8(tambien aceptado aunque tiene un orden de preferencia menor que el ingles). <br />
@@ -87,7 +88,7 @@ Realiza un informe en el que indiques:
 10.Alguna línea de código HTML que se aplique. <br />
  	
 	Primera pagina: <a href="http://www.gobiernodecanarias.org/istac/api/structural-resources/v1.0/#/" alt="API de recursos estructurales">API de recursos estructurales</a>
-	Segunda pagina: #<span class="html-tag">
+	Segunda pagina: <span class="html-tag">
         	"<operations:operation"
 		<span class="html-attribute">
 		<span class="html-attribute-name">kind></span>
