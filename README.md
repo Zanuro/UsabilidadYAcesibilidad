@@ -72,7 +72,7 @@ Realiza un informe en el que indiques:
     		learn: function(wordsMap) {
 		    this._words = wordsMap;
    		 }
- 	 };' <br />
+ 	 };'
    	
    La segunda pagina no tiene funcionalidades propias de javascript.<br />
 9.Alguna línea de código CSS que se aplique. <br />
