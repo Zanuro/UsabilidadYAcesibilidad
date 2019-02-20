@@ -10,6 +10,15 @@ Realizar la lectura del documento: "La fábula del diseñador centrado en el usu
 	Tareas críticas (priorizar aquellas tareas que respondan a las necesidades del usuario),investigar con los usuarios para enfocar el trabajo a las metas.
 	
 2.Definir en el documento los personajes y perfiles de usuario que vayan a usar tu producto y la especificación de requisitos.
+
+Tipos de Usuario
+	
+    Manager: Usuario único con todos los privilegios y acceso a todo movimiento de cada administrador creado.
+    Administrador: Usuario con todos los privilegios sobre el SAS y a cargo de toda la gestión y administración de su zona.
+    Supervisor: Usuario a cargo de un administrador, puede crear sesiones y gestionar moderadores y usuarios.
+    Moderador: Usuario a cargo de sus propias salas asignadas con capacidad
+    Participante: Usuario con capacidad para visualizar las sesiones a la que ha asistido.
+
 	
 
 # Practica-Introduccion al protocolo HTTP.
