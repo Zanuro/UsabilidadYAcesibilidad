@@ -15,3 +15,5 @@
 - Prueba de Atención Visual y Audio: </br>
 	La prueba de atención visual y audio es una prueba difícil que no hemos podido resolver porque hay muchas dificultades para lograrla.
 	
+- Coblis - Color Blindness Simulator
+	Es una buena herramienta para confrontar con las distintas minusvalías visuales. Resulta interesante cómo estos algoritmos nos pueden enseñar con lo que se tengan que enfrentar las personas con estas discapacidades.Por lo tanto, este tipo de aplicaciones nos permiten tener un poco más de empatía, comprender mejor la forma de percibir los colores de las personas que tengan estas inhabilidades.
