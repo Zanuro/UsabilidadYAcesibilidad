@@ -1,0 +1,28 @@
+
+#cabecera{ 
+    background-color: #BDBDBD;  
+    font-size:12pt; 
+    font-weight: bold; 
+    padding: 3 3 3 10px; 
+}
+ 
+#lateral{ 
+    width: 160px; 
+    float:left; 
+} 
+#otrolado{ 
+    width: 120px; 
+    float: right;   
+} 
+#principal{ 
+    margin-left: 170px; 
+    background-color: #ffffff; 
+    padding: 4 4 4 4px; 
+    width: 460px; 
+} 
+#pie{ 
+    background-color: #cccccc; 
+    padding: 3 10 3 10px; 
+    text-align:right; 
+    clear: both; 
+}
