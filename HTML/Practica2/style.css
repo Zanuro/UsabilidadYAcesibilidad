@@ -1,28 +1,51 @@
-
+/*  
+    Zona de fonde gris suave.
+    Debe contener una barra de navegación
+*/
 #cabecera{ 
     background-color: #BDBDBD;  
     font-size:12pt; 
     font-weight: bold; 
+    width: 330;
+    height: 100;
     padding: 3 3 3 10px; 
 }
  
 #lateral{ 
-    width: 160px; 
-    float:left; 
+    width: 2000px; 
+    float: left;
 } 
+
 #otrolado{ 
-    width: 120px; 
-    float: right;   
+    width: 200px; 
+    float: right;  
+    text-align: left;
 } 
+
 #principal{ 
-    margin-left: 170px; 
-    background-color: #ffffff; 
-    padding: 4 4 4 4px; 
-    width: 460px; 
+    background-color: #ffffff;  
+    width: 330px; 
+    display: inline-block;
+    text-align: center;
 } 
-#pie{ 
+
+
+
+/*
+    Zona de pie de página
+*/
+footer { 
     background-color: #cccccc; 
+    width: 330;
     padding: 3 10 3 10px; 
     text-align:right; 
     clear: both; 
 }
+
+html {
+    width: 770px;
+    font-family: "Arial";
+    font-size: 1.5em;
+    color: black;
+}
+
