@@ -3,14 +3,25 @@
     Debe contener una barra de navegación
 */
 #cabecera{ 
-    background-color: #BDBDBD;  
-    font-size:12pt; 
+    
+    background-color: #BDBDBD;
+    font-size: 12pt; 
     font-weight: bold; 
-    width: 330;
-    height: 100;
-    padding: 3 3 3 10px; 
+    width: 770px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
 }
- 
+
+#cabecera < nav {
+    float: left;
+}
+
+#cabecera < header {
+    float: right;
+    background-image: "img/club.jpg";
+}
+
 #lateral{ 
     width: 200px; 
     float: left;
@@ -37,9 +48,8 @@
 */
 footer { 
     background-color: #cccccc; 
-    width: 330;
-    padding: 3 10 3 10px; 
-    text-align:right; 
+    width: 770px;
+    text-align: right; 
     clear: both; 
 }
 
@@ -48,5 +58,27 @@ html {
     font-family: "Arial";
     font-size: 1.5em;
     color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    
+    font-family: "Verdana";
+    color: blueviolet;
+}
+
+
+table a {
+    color: green;
 }
 
