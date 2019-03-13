@@ -13,11 +13,11 @@
     display: inline-block;
 }
 
-#cabecera < nav {
+#cabecera > nav {
     float: left;
 }
 
-#cabecera < header {
+#cabecera > header {
     float: right;
     background-image: "img/club.jpg";
 }
@@ -80,5 +80,19 @@ a:visited {
 
 table a {
     color: green;
+}
+
+p {
+    padding-top: 0.5 em;
+}
+
+nav > a {
+    padding: 0.3 em;
+    margin-bottom: 0.7 em;
+    background-color: grey;
+
+}
+nav > a:hover {
+    background-color: red;
 }
 
