@@ -1,46 +1,69 @@
-/*  
-    Zona de fonde gris suave.
-    Debe contener una barra de navegación
-*/
-#cabecera{ 
+
+html {
+    width: 770px;
+    font-family: "Arial";
+    font-size: 1.5em;
+    color: black;
     
-    background-color: #BDBDBD;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+body {
+    background-color: #FFF8AF;
+    margin: 0;
+    padding: 0;
+}
+
+#cabecera{ 
     font-size: 12pt; 
     font-weight: bold; 
     width: 770px;
     height: 100px;
     text-align: center;
-    display: inline-block;
+    float: right;
+    background-image: url("img/cabecera.jpg");
+    background-color: grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 #cabecera > nav {
     float: left;
 }
 
-#cabecera > header {
-    float: right;
-    background-image: "img/club.jpg";
-}
-
-#lateral{ 
+#lateral{
+    /*background-color: #08f8c4; */
     width: 200px; 
     float: left;
 } 
 
 #otrolado{ 
-    width: 200px; 
+    /*background-color: #03f137;*/
+    width: 238px;   /*Tecnicamente son 200px pero queda un hueco*/
     float: right;  
     text-align: left;
 } 
 
 #principal{ 
-    background-color: #ffffff;  
+   /* background-color: #ffffff;  */
     width: 330px; 
     text-align: center;
 } 
 
+#principal img{
+    width: 250px;
+    margin: auto;
+    display: block;
+    align-content: center;
+}
+
 .seccion {
     display: inline-block;
+    
 }
 
 /*
@@ -49,19 +72,9 @@
 footer { 
     background-color: #cccccc; 
     width: 770px;
-    text-align: right; 
+    text-align: center; 
     clear: both; 
 }
-
-html {
-    width: 770px;
-    font-family: "Arial";
-    font-size: 1.5em;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 a {
     color: blue;
@@ -77,22 +90,52 @@ a:visited {
     color: blueviolet;
 }
 
-
+table{
+    width: 330px;
+    display: block;
+    overflow-x: auto;
+}
 table a {
     color: green;
 }
 
 p {
-    padding-top: 0.5 em;
+    padding-top: 0.5em;
+   
 }
 
 nav > a {
-    padding: 0.3 em;
-    margin-bottom: 0.7 em;
     background-color: grey;
-
 }
 nav > a:hover {
-    background-color: red;
+    background-color: #FFE65A;
 }
 
+.pagina-principal{
+    display: table;
+    width:100%;
+}
+
+header h1 {
+    text-align: center;
+}
+
+ol {
+    text-align: left;
+}
+
+#lateral li{
+
+    padding: 0.3em;
+    margin-bottom: 0.7em;
+}
+#lateral p {
+    text-align: center;
+}
+
+#otrolado a{
+    line-height: 2em;
+}
+#otrolado{
+    text-align:center;
+}
