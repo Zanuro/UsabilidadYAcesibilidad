@@ -43,7 +43,7 @@ body {
 
 #otrolado{ 
     /*background-color: #03f137;*/
-    width: 238px;   /*Tecnicamente son 200px pero queda un hueco*/
+    width: 200px;   /*Tecnicamente son 200px pero queda un hueco*/
     float: right;  
     text-align: left;
 } 
