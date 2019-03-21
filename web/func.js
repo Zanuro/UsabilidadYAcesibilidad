@@ -46,17 +46,55 @@ var productos = {
 			{"Nombre" : "Agua", "Precio" : 0.8}
 		],
 		calcular_igic : function() {
-			for( var i in "Productos"){
-				console.log(Productos[i].Nombre);
+			for( var i in productos.Productos){
+				//console.log(productos.Productos[i].Nombre);
+				console.log(`Precio antes de aplicarle IGIC: ${productos.Productos[i].Nombre} --> ${productos.Productos[i].Precio.toPrecision(3)} \n`);
+				productos.Productos[i].Precio += productos.Productos[i].Precio * 0.065 
+				console.log(`Precio despues de aplicarle IGIC: ${productos.Productos[i].Nombre} --> ${productos.Productos[i].Precio.toPrecision(3)} \n`);
+				//return(productos.Productos[i].Nombre);	
 			}
 		}
 };
 
-function devolver_monedas(cantidad){
 
-	var tipo_monedas = [1,2,5];
+function devolver_monedas(monedas,cantidad){
 
-	if(cantidad < tipo_monedas[2]){
-
+	if(cantidad >= monedas[2]["key"]){
+		cantidad -= monedas[2]["key"];
+		monedas[2]["value"] += 1;
+		devolver_monedas(monedas,cantidad);
 	}
+	else if(cantidad < monedas[2]["key"] && cantidad >= monedas[1]["key"]){
+		cantidad -= monedas[1]["key"];
+		monedas[1]["value"] += 1;
+		devolver_monedas(monedas,cantidad);
+	}
+	else if(cantidad < monedas[1]["key"] && cantidad >= monedas[0]["key"]){
+		cantidad -= monedas[0]["key"];
+		monedas[0]["value"] += 1;
+		devolver_monedas(monedas,cantidad);
+	}
+	else if(cantidad == 0){
+		console.log('No se puede devolver ningun cambio');
+	}
+	else if(cantidad < monedas[0]["key"]){
+		console.log('No hay monedas para poder devolver');
+	}
+	return monedas;
 }
+
+
+function cambio_monedas(cantidad){
+
+	var monedas = [{key: 1, value: 0}, 
+				   {key: 2, value: 0}, 
+				   {key: 5, value: 0}];
+
+	console.log(`La cantidad es:  ${cantidad}`);
+	monedas = devolver_monedas(monedas,cantidad);
+	console.log('El cambio que se devuelve es: ')
+	for( i in monedas){
+		console.log(`${monedas[i]["value"]} monedas de ${monedas[i]["key"]}\n`);
+	};
+}
+
