@@ -131,3 +131,8 @@ Realiza un informe en el que indiques:
 	El método appendChild () agrega un nodo como el último elemento secundario de un nodo.
 	El método replaceChild () reemplaza un nodo secundario con un nuevo nodo.
 	El método write () escribe expresiones HTML o código JavaScript en un documento.
+2.Realiza un esquema del árbol DOM que genera el código HTML en el fichero enlazado.
+
+3.Define una función en javascript en la que se pueda calcular el cambio entre diferentes monedas (al menos 3 diferentes).
+4.Define una función javascript que calcule el importe de la compra de productos, con el IGIC aplicado. (Los productos estarán almacenados en un json)
+5.Crear un script que muestre un informe de la cantidad de párrafos, enlaces y elementos ul en tu página de inicio.
