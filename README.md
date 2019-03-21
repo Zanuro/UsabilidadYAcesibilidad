@@ -134,5 +134,14 @@ Realiza un informe en el que indiques:
 2.Realiza un esquema del árbol DOM que genera el código HTML en el fichero enlazado.
 ![HTML](uya.png) 
 3.Define una función en javascript en la que se pueda calcular el cambio entre diferentes monedas (al menos 3 diferentes).
+
+	Function count_element(){
+		var count,count1,count2 =0;
+		count = document.getElementByTagName(‘p’).length;
+		count1 = document.getElementByTagName(‘a’).length;
+		count2 = document.getElementByTagName(‘ul’).length;
+		return [count,count1,count2];	
+	}
 4.Define una función javascript que calcule el importe de la compra de productos, con el IGIC aplicado. (Los productos estarán almacenados en un json)
+
 5.Crear un script que muestre un informe de la cantidad de párrafos, enlaces y elementos ul en tu página de inicio.
