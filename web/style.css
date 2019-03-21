@@ -1,0 +1,143 @@
+nav{
+   width: 100%;
+   background-color: #abb2b9;
+   margin: 0;
+ }
+ nav ul {
+   margin-top:0;
+   padding: 0 10px;
+   display: inline-table;
+   background: linear-gradient(top, #e0e0e0 0%, #686868 100%);
+ }
+
+ h1{
+    text-align: center;
+    color:wheat;
+    position: relative;
+    top: -50px;
+ }
+ 
+ body {
+   padding: 0;
+   margin: 0;
+ } 
+ footer iframe {
+   width: "100"; 
+   height: "75";
+ 
+ }
+ html {
+   margin-top:0;
+   padding:0;
+ }
+ 
+ 
+ footer iframe {
+   width: "100"; 
+   height: "75";
+ 
+ }
+ 
+ #background{
+   background-image : url("./img/books-wallpaper-5.jpg");
+   width: 100%;
+   height: 400px;
+ }
+
+ .titulo-aventura{
+    text-align: left;
+ }
+
+ #categorias-libros{
+   text-align: center;
+ }
+
+ #categorias{
+   margin: auto;
+   width: 50%;
+ }
+
+.carousel .carousel-item{
+      visibility: visible;
+
+}
+
+.carousel-item img{
+    width:30%;
+    height:200px;
+}
+
+.tabs img{
+    width:200px;
+    height:300px;
+}
+.tabul{
+    height:300px;
+}
+#libros-aventura{
+    height: 300px;
+}
+
+#elemento-libro{
+    height:300px;
+}
+.tabs{
+    height:300px;
+}
+#libros{
+    height:350px;
+}
+
+#elemento-libro span{
+    font-family: "Sans Serif";
+}
+
+.carousel.carousel-slider{
+    top:0;
+    left:0;
+}
+
+.carousel {
+    overflow: hidden;
+    transform-origin: 0% 50%;
+    position:relative;
+    width:100%;
+}
+
+#elemento-libroo{
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height:80px;
+    margin: auto;
+}
+#row-aventuras{
+    margin: 50px;
+}
+
+footer {
+    bottom:0px;
+}
+
+.col s3 m3 l3 xl3{
+    height: 300px;
+}
+
+#id-circe{
+    height:340px;
+}
+
+#id-proposito{
+    height:385px;
+}
+
+#id-frontera{
+    height:340px;
+}
+
+#logo-pag{
+    position:relative;
+    bottom: 25px;
+    width:150px;
+    height:120px;
+}
