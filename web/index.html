@@ -18,8 +18,12 @@
             <ul class="right hide-on-med-and-down">
                <li><a href="novedades.html">Ver Ultimas Novedades</a></li>
                <li><a href="recomendacion.html">Recomendacion de libros</a></li>
-               <li><a class="dropdown-trigger" href="#!" data-target="dropdown-login">Acceder<i class="material-icons right">adjust</i></a></li>
-               <li>
+               <li><a class="dropdown-trigger" href="#" data-target="dropdown-login">Acceder<i class="material-icons right">adjust</i></a></li>
+               <ul id="dropdown1" class="dropdown-content">
+                  <li><a href="#!"><i class="material-icons">all_inclusive</i>Login</a></li>
+                  <li><a href="#!"><i class="material-icons">hourglass_empty</i>Registrarse</a></li>
+                </ul>
+                  <li>
                   <div class="center row">
                      <div class="col s12 ">
                         <div class="row" id="topbarsearch">
@@ -31,7 +35,7 @@
                      </div>
                   </div>
                </li>
-            </ul>
+               </ul>
          </div>
       </nav>
       <div id="background" class="center row">
@@ -262,9 +266,9 @@
             </div>
          </div>
       </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="java.js"></script>
+      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type-'text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="func.js"></script>
       <script> 
           const Calender = document.querySelector('.datepicker');
           M.Datepicker.init(Calender,{});
