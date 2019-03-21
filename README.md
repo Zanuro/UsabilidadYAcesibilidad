@@ -124,7 +124,7 @@ Realiza un informe en el que indiques:
 	El método getElementsByClassName () devuelve una colección de todos los elementos en el documento con el nombre de clase especificado, como un objeto NodeList.
 	La propiedad innerHTML establece o devuelve el contenido HTML de un elemento.
 	La propiedad attribute devuelve una colección de los atributos del nodo especificado.
-	La propiedad style devuelve un objeto CSSStyleDeclaration, que representa el atributo de estilo de un elemento. La 	propiedad de estilo se usa para obtener o establecer un estilo específico de un elemento utilizando diferentes propiedades CSS.
+	La propiedad style devuelve un objeto CSSStyleDeclaration, que representa el atributo de estilo de un elemento. La propiedad de estilo se usa para obtener o establecer un estilo específico de un elemento utilizando diferentes propiedades CSS.
 	El método setAttribute () agrega el atributo especificado a un elemento y le da el valor especificado.
 	El método createElement () crea un nodo de elemento con el nombre especificado.
 	El método removeChild () elimina un nodo secundario especificado del elemento especificado.
