@@ -98,3 +98,44 @@ function cambio_monedas(cantidad){
 	};
 }
 
+
+$("#boton_registro").click(function(){
+
+const peticion_http = new XMLHttpRequest();
+const url = 'https://jsonplaceholder.typicode.com/comments?postId=50';
+
+peticion_http.open("GET", url);
+
+var nombres = [];
+var emails = [];
+
+peticion_http.onreadystatechange = function () {
+
+	if(peticion_http.readyState == 4 && peticion_http.status == 200){
+		console.log(peticion_http.responseText);
+
+		//alert(peticion_http.responseText);
+		
+		var elementos = JSON.parse(peticion_http.responseText);
+
+		for(var i in elementos){
+			nombres.push(elementos[i].name);
+			emails.push(elementos[i].email);	
+		}
+
+		for(var i in nombres){
+			$("#registro-input").append(`Nombre: ${nombres[i]}`);
+			$("#registro-input").append("  ");
+			$("#registro-input").append(`Correo: ${emails[i]}`);
+			$("#registro-input").append("<br>");
+
+		}
+		//document.getElementById("").body=elementos.first;
+	}
+	else{
+		console.error('No se ha cargado la pagina');
+	}
+}
+
+peticion_http.send();
+});
