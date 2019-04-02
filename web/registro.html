@@ -46,8 +46,43 @@
       </div>
       
       <div id="registro"> 
-      <h1> Formulario Registro</h1> 
-      <button type="button" name="registro_datos" id="boton_registro">Get data</button>
+        <div class="row">
+         <h1> Formulario Registro</h1> 
+         <form class="col s4 offset-s4">
+         <div class="row">
+            <div class="input-field col s12">
+               <textarea id="nombres" class="materialize-textarea"></textarea>
+               <label for="nombres">Nombres</label>
+            </div>
+         </div>
+         <div class="row">
+            <div class="input-field col s12">
+               <textarea id="email" class="materialize-textarea"></textarea>
+               <label for="email">Email</label>
+            </div>
+         </div>
+         </form>
+         </div>
+         <div class="row">
+         <div class="col s3 offset-s4">
+         <button class="btn waves-effect waves-light" type="button" name="registro_datos" id="boton_registro">Get Data!
+            <i class="material-icons right">send</i>
+         </button>
+         </div>
+         </div>
+
+      <!--
+      <form action="/obtener-datos" method="post">
+      <div>
+      <label for="name">Name:</label>
+      <textarea id="nombres" name="nombre_usuarios"></textarea>
+      </div>
+      <div>
+      <label for="mail">E-mail:</label>
+      <textarea id="email" name="email_usuarios"></textarea>
+      </div>
+      </form>-->
+      <!--<button type="button" name="registro_datos" id="boton_registro">Get data</button>-->
       <p id="registro-input"> </p>
       </div>
 

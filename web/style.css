@@ -141,3 +141,16 @@ footer {
     width:150px;
     height:120px;
 }
+
+#nombres,#email {
+
+    overflow-y: scroll;
+    height: 80px;
+    resize: none;
+}
+#boton_registro{
+    
+    margin-left: 240px;
+    margin-bottom: 30px;
+    
+}

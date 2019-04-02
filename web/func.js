@@ -124,11 +124,8 @@ peticion_http.onreadystatechange = function () {
 		}
 
 		for(var i in nombres){
-			$("#registro-input").append(`Nombre: ${nombres[i]}`);
-			$("#registro-input").append("  ");
-			$("#registro-input").append(`Correo: ${emails[i]}`);
-			$("#registro-input").append("<br>");
-
+			$("#nombres").append(`${i} : ${nombres[i]}\n`);
+			$("#email").append(`${i} : ${emails[i]}\n`);
 		}
 		//document.getElementById("").body=elementos.first;
 	}
