@@ -9,6 +9,33 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <link rel="stylesheet" type="text/css" href="style.css"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+           apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
+           authDomain: "webua1819.firebaseapp.com",
+           databaseURL: "https://webua1819.firebaseio.com",
+           projectId: "webua1819",
+           storageBucket: "webua1819.appspot.com",
+           messagingSenderId: "28657746169"
+        };
+        firebase.initializeApp(config);
+        var myDatabase = firebase.database();
+        var refDB = myDatabase.ref('libros');
+        var obj;
+        function crear(){
+            obj = {
+                autor: '#nombre',
+                titulo: '#libro',
+                año: '#agnos',
+                genero: '#genero',
+                isbn: '#isbn'
+            }
+        }
+        refDB.set(obj); 
+    </script>
     </head>
     <body>
         <nav>
@@ -47,7 +74,7 @@
                     <p>Genero: <input type="text" name="genero"></p>
                     <p>ISBN: <input type="text" name="isbn"></p>
                     <p>
-                        <input type="submit" value="Enviar">
+                        <input type="submit" onclick="crear()" value="Enviar">
                         <input type="reset" value="Borrar">
                     </p>
                 </form>
