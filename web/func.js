@@ -14,15 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-$(".dropdown-trigger").click(function(){
-	   alert("aham");
-	 //$(".dropdown-trigger").dropdown();
-},
-function(){
-  alert("Bye");
-});
-
-
 //window.alert('otro');
 
 function count_element() {
@@ -49,9 +40,9 @@ var productos = {
 			for( var i in productos.Productos){
 				//console.log(productos.Productos[i].Nombre);
 				console.log(`Precio antes de aplicarle IGIC: ${productos.Productos[i].Nombre} --> ${productos.Productos[i].Precio.toPrecision(3)} \n`);
-				productos.Productos[i].Precio += productos.Productos[i].Precio * 0.065 
+				productos.Productos[i].Precio += productos.Productos[i].Precio * 0.065
 				console.log(`Precio despues de aplicarle IGIC: ${productos.Productos[i].Nombre} --> ${productos.Productos[i].Precio.toPrecision(3)} \n`);
-				//return(productos.Productos[i].Nombre);	
+				//return(productos.Productos[i].Nombre);
 			}
 		}
 };
@@ -86,8 +77,8 @@ function devolver_monedas(monedas,cantidad){
 
 function cambio_monedas(cantidad){
 
-	var monedas = [{key: 1, value: 0}, 
-				   {key: 2, value: 0}, 
+	var monedas = [{key: 1, value: 0},
+				   {key: 2, value: 0},
 				   {key: 5, value: 0}];
 
 	console.log(`La cantidad es:  ${cantidad}`);
@@ -102,8 +93,10 @@ function cambio_monedas(cantidad){
 $("#boton_registro").click(function(){
 
 const peticion_http = new XMLHttpRequest();
-const url = 'https://jsonplaceholder.typicode.com/comments?postId=50';
+const url = 'https://jsonplaceholder.typicode.com/comments?postId=49';
 
+
+var id;
 peticion_http.open("GET", url);
 
 var nombres = [];
@@ -115,12 +108,12 @@ peticion_http.onreadystatechange = function () {
 		console.log(peticion_http.responseText);
 
 		//alert(peticion_http.responseText);
-		
+
 		var elementos = JSON.parse(peticion_http.responseText);
 
 		for(var i in elementos){
 			nombres.push(elementos[i].name);
-			emails.push(elementos[i].email);	
+			emails.push(elementos[i].email);
 		}
 
 		for(var i in nombres){
