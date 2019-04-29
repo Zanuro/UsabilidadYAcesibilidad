@@ -129,3 +129,14 @@ peticion_http.onreadystatechange = function () {
 
 peticion_http.send();
 });
+
+var email = document.getElementById("mail");
+
+email.addEventListener("keyup", function (event) {
+  if(email.validity.typeMismatch){
+    email.setCustomValidity("Dirección de correo erronea,por favor introduzca una direccion de correo valida!");
+  }
+  else{
+	  email.setCustomValidity("")
+  }
+});
