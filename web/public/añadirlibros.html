@@ -23,19 +23,21 @@
         };
         firebase.initializeApp(config);
         var myDatabase = firebase.database();
-        var refDB = myDatabase.ref('brief_history');
-        var obj;
-        function crear(){
-            obj = {
-                autor: '#nombre',
-                titulo: '#libro',
-                año: '#agnos',
-                genero: '#genero',
-                isbn: '#isbn'
-            }
-            refDB.set(obj); 
-        }
-        
+        var refDB = myDatabase.ref().child('libros');
+        var refDC = refDB.child('esdla');
+        var obj={
+           autor: 'tolkien',
+           isbn: 'A65748974'
+        };
+        //function crear(){
+          //  obj = {
+            //    autor: '#nombre',
+              //  titulo: '#libro',
+                //año: '#agnos',
+                //genero: '#genero',
+                //isbn: '#isbn'
+            //}
+         refDC.set(obj); 
     </script>
     </head>
     <body>
