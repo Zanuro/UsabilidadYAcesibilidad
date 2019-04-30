@@ -23,12 +23,18 @@
         };
         firebase.initializeApp(config);
         var myDatabase = firebase.database();
-        var refDB = myDatabase.ref().child('libros');
-        var refDC = refDB.child('esdla');
-        var obj={
-           autor: 'tolkien',
-           isbn: 'A65748974'
+        function crear(){
+         var refDB = myDatabase.ref().child('libros');
+         var refDC = refDB.child(document.getElementById("libro").value);
+         var obj={
+           autor: document.getElementById("nombre").value,
+           age: document.getElementById("agnos").value,
+           genero: document.getElementById("genero").value,
+           isbn: document.getElementById("isbn").value,
         };
+        refDC.set(obj);
+        }
+        
         //function crear(){
           //  obj = {
             //    autor: '#nombre',
@@ -37,7 +43,7 @@
                 //genero: '#genero',
                 //isbn: '#isbn'
             //}
-         refDC.set(obj); 
+          
     </script>
     </head>
     <body>
@@ -71,11 +77,11 @@
         <div class="row">
             <div class="col s4 offset-l4">
                 <form class="formulario" action="index.html" method="post">
-                    <p>Libro: <input type="text" name="libro"></p>
-                    <p>Nombre: <input type="text" name="nombre"></p>
-                    <p>Año: <input type="number" name="agnos"></p>
-                    <p>Genero: <input type="text" name="genero"></p>
-                    <p>ISBN: <input type="text" name="isbn"></p>
+                    <p>Titulo: <input type="text" id="libro"></p>
+                    <p>Autor: <input type="text" id="nombre"></p>
+                    <p>Año: <input type="number" id="agnos"></p>
+                    <p>Genero: <input type="text" id="genero"></p>
+                    <p>ISBN: <input type="text" id="isbn" minlength="13" maxlength="13"></p>
                     <p>
                         <input type="submit" onclick="crear()" value="Enviar">
                         <input type="reset" value="Borrar">
