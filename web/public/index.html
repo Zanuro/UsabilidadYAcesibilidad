@@ -1,65 +1,295 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <title>Club de la Lectura</title>
+      <meta http-equiv="content-type"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes"/>
+      <meta charset="UTF-8"/>
+      <link rel="shortcut icon" type="image/x-icon" href="img/icon.ico"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.10.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.10.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.10.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.10.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.10.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+         apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
+         authDomain: "webua1819.firebaseapp.com",
+         databaseURL: "https://webua1819.firebaseio.com",
+         projectId: "webua1819",
+         storageBucket: "webua1819.appspot.com",
+         messagingSenderId: "28657746169"
+      };
+      firebase.initializeApp(config);
+      </script>
+   </head>
+   <body>
+      <nav>
+         <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png"></img></a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="novedades.html">Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html">Recomendacion de libros</a></li>
+               <li><a href="registro.html">Ejemplo</a></li>
+               <li><a href="añadirlibros.html">Añadir Libros</a></li>
+               <li><a class="dropdown-trigger" href="#" data-target="dropdown-login">Acceder<i class="material-icons right">adjust</i></a></li>
+               <ul id="dropdown1" class="dropdown-content">
+                  <li><a href="#!"><i class="material-icons">all_inclusive</i>Login</a></li>
+                  <li><a href="#!"><i class="material-icons">hourglass_empty</i>Registrarse</a></li>
+                </ul>
+                  <li>
+                  <div class="center row">
+                     <div class="col s12 ">
+                        <div class="row" id="topbarsearch">
+                           <div class="input-field col s6 s12 red-text">
+                              <i class="white-text material-icons prefix"></i>
+                              <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               </ul>
+         </div>
+      </nav>
+      <div id="background" class="center row">
+         <div class="col s12 m12 l12 xl12">
+            <h1 class="titulo">El club de Lectura</h1>
+         </div>
+      </div>
+      <div id="pagina-principal" class="center row">
+      <div id="row-aventuras" class="center row">
+         <div class="col s8 offset-s1 m8 offset-m1 l8 offset-l1 xl8 offset-xl1">
+            <h1 class = "titulo-aventura"> Aventuras </h1>
+            <div id="libros-aventura" class="centre row">
+               <div class="col s12 m12 l12 xl12">
+                  <ul id="libros" class="tabs tab-demo z-depth-1">
+                     <li id="elemento-libro" class="tab"><a href="#ejem1"><img src="img/codigodavinci.jpg"></a><span>Codigo Da Vinci</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem2"><img src="img/desierto.jpg"></a><span>A traves del Desierto</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem3"><img src="img/lobodelmar.jpg"></a><span>El lobo del mar</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem4"><img src="img/quijote.jpg"></a><span>Don Quijote de la Mancha</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem5"><img src="img/isla_tesoro.jpg"></a><span>La isla del tesoro</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem6"><img src="img/prisionerozenda.jpg"></a><span>El prisionero de Zenda</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/ronin.jpg"></a><span>Ronin</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/caton.jpg"></a><span>El regreso del Caton</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/montecristo.jpeg"></a><span>El conde de Montecristo</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/gulliver.jpeg"></a><span>Los viajes de Gulliver</span></li>
+                  </ul>
+               </div>
+            </div>
+            <!--<div class="carousel carousel-slider">
+               <a class="carousel-item" href="#one"><img src="img/codigodavinci.jpg"></a>
+               <a class="carousel-item" href="#two"><img src="img/desierto.jpg"></a>
+               <a class="carousel-item" href="#three"><img src="img/lobodelmar.jpg"></a>
+               <a class="carousel-item" href="#four"><img src="img/quijote.jpg"></a>
+               <a class="carousel-item" href="#five"><img src="img/isla_tesoro.jpg"></a>
+               <a class="carousel-item" href="#six"><img src="img/prisionerozenda.jpg"></a>
+               </div>-->
+         </div>
+         <div class="col s3 m3 l3 xl3">
+            <h1 class="categoria"> Categorias </h1>
+            <ul id="categorias" class="collapsible">
+               <li>
+                  <div class="collapsible-header"><i class="fab fa-fort-awesome"></i>Aventura</div>
+                  <div class="collapsible-body"><span>La novela de aventuras es un género literario que narra los viajes, el misterio y el riesgo. Una característica recurrente es la acción presente hasta dominar los escenarios, básica para el desarrollo de la trama.</span></div>
+               </li>
+               <li>
+                  <div class="collapsible-header"><i class="material-icons">whatshot</i>Policiaca</div>
+                  <div class="collapsible-body"><span>El crimen de ficción es un género literario que ficcionaliza los delitos, su detección, los criminales y sus motivos. Generalmente se distingue de la ficción convencional y otros géneros como la ficción histórica o la ciencia ficción, pero los límites son distintos.</span></div>
+               </li>
+               <li>
+                  <div class="collapsible-header"><i class="fas fa-history"></i>Historia</div>
+                  <div class="collapsible-body"><span>La novela histórica es un subgénero narrativo que se configuró en el Romanticismo del siglo XIX y que ha continuado desarrollándose con bastante éxito en los siglos XX y XXI. Utilizando un argumento de ficción, como cualquier novela, tiene la característica de que este se sitúa en un momento histórico concreto y los acontecimientos históricos reales suelen tener cierta relevancia en el desarrollo del argumento</span></div>
+               </li>
+               <li>
+                  <div class="collapsible-header"><i class="fab fa-reddit-alien"></i>Ficcion</div>
+                  <div class="collapsible-body"><span>Ciencia ficción es la denominación de uno de los géneros derivados de la literatura de ficción, junto con la literatura fantástica y la narrativa de terror.Es un género especulativo que relata acontecimientos posibles desarrollados en un marco imaginario, cuya verosimilitud se fundamenta narrativamente en los campos de las ciencias físicas, naturales y sociales</span></div>
+               </li>
+               <li>
+                  <div class="collapsible-header"><i class="fas fa-book"></i>Clasicos Universales</div>
+                  <div class="collapsible-body"><span>La Biblioteca Mundial es una lista de los 100 mejores libros de la historia, según lo propuesto por 100 escritores de 54 países diferentes, recopiladas y organizadas en el año 2002 por el Club del Libro Noruego</span></div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div id="row-aventuras" class="center row">
+         <div class="col s8 offset-s1 m8 offset-m1 l8 offset-l1 xl8 offset-xl1">
+            <h1 class = "titulo-aventura"> Policiaca </h1>
+            <div id="libros-policiaca" class="centre row">
+               <div class="col s12 m12 l12 xl12">
+                  <ul id="libros" class="tabs tab-demo z-depth-1">
+                     <li id="elemento-libro" class="tab"><a href="#ejem1"><img src="img/zorro.jpeg"></a><span>Zorro</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem2"><img src="img/espinas.jpeg"></a><span>El lenguaje de espinas</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem3"><img src="img/visitante.jpeg"></a><span>Visitante</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem4"><img src="img/border.jpeg"></a><span>The Border</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem5"><img src="img/falco.jpeg"></a><span>Falco</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem6"><img src="img/pitagora.jpg"></a><span>El asesinato de Pitagoras</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/sakura.jpg"></a><span>Sakura</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/hielo.jpg"></a><span>Te vere bajo el hielo</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/petirrojo.jpg"></a><span>Petirrojo</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/paciente.jpeg"></a><span>El paciente</span></li>
+                  </ul>
+               </div>
+            </div>
+            <!--<div class="carousel carousel-slider">
+               <a class="carousel-item" href="#one"><img src="img/codigodavinci.jpg"></a>
+               <a class="carousel-item" href="#two"><img src="img/desierto.jpg"></a>
+               <a class="carousel-item" href="#three"><img src="img/lobodelmar.jpg"></a>
+               <a class="carousel-item" href="#four"><img src="img/quijote.jpg"></a>
+               <a class="carousel-item" href="#five"><img src="img/isla_tesoro.jpg"></a>
+               <a class="carousel-item" href="#six"><img src="img/prisionerozenda.jpg"></a>
+               </div>-->
+         </div>
+         <!--
+         <div class="col s3 m3 l3 xl3">
+            <h1 class="calendario"> Calendario </h1>
+            <iframe src="https://calendar.google.com/calendar/b/3/embed?height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=honae49s8t8uek94jv3m3424ng%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=Atlantic%2FCanary" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+         </div>-->
+         <div class="col s3 m3 l3 xl3">
+            <h3> Calendario </h3>
+            <form>
+            <div class="input-field">
+                <input type="text" class="datepicker">
+            </div>
+            </form>
+      </div>
+      </div>
+      <div id="row-novedades" class="center row">
+         <div class="col s8 offset-s2 m8 offset-m2 l8 offset-l2 xl8 offset-xl2">
+            <h1 class = "titulo-novedades"> Novedades </h1>
+            <div id="libros-novedades" class="centre row">
+               <div class="col s12 m12 l12 xl12">
+                  <div class="col s3 m3 l3 xl3">
+                     <div id="libro-nov" class="card">
+                        <div class="card-image">
+                           <img src="img/sofia.jpg"></img>
+                        </div>
+                        <div class="card-content">
+                           <p>La anodina vida de Sofía y Daniel cambia radicalmente cuando él recibe una carta anónima en la que se le dice que Sagrario, a la que venera, 
+                              no es su verdadera madre y que si quiere conocer la verdad de su origen debe ir a París esa misma noche.
+                           </p>
+                        </div>
+                        <div class="card-action">
+                           <a href="#">Mas detalles</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col s3 m3 l3 xl3">
+                     <div class="card">
+                        <div class="card-image">
+                           <img id="id-circe" src="img/circe.jpg"></img>
+                        </div>
+                        <div class="card-content">
+                           <p>En el palacio de Helios, dios del sol y el más poderoso de los titanes, nace una niña. Pero Circe es una niña rara: carece de los poderes de su padre y 
+                              de la agresiva capacidad de seducción de su madre. Cuando acude al mundo de los mortales en busca de compañía, descubre que sí posee un poder,
+                              el poder de la brujería, con el que puede transformar a sus rivales en monstruos y amenazar a los mismísimos dioses.
+                           </p>
+                        </div>
+                        <div class="card-action">
+                           <a href="#">Mas detalles</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col s3 m3 l3 xl3">
+                     <div class="card">
+                        <div class="card-image">
+                           <img id="id-proposito" src="img/proposito.jpg"></img>
+                        </div>
+                        <div class="card-content">
+                           <p>Jaime Lorente nos presenta A propósito de tu boca, un poemario que lleva escribiendo desde que iba al colegio. Un texto personal 
+                              y sensible sobre su visión del amor y de su forma de experimentarlo y vivirlo. 
+                              En el libro conviven dos mundos muy extremos, uno muy blanco y otro más oscuro, que pertenecen a lo más íntimo del autor.
+                           </p>
+                        </div>
+                        <div class="card-action">
+                           <a href="#">Mas detalles</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col s3 m3 l3 xl3">
+                     <div class="card">
+                        <div class="card-image">
+                           <img id="id-frontera" src="img/frontera.jpg"></img>
+                        </div>
+                        <div class="card-content">
+                           <p>La guerra ha llegado a casa.
+                              Hace cuarenta años que Art Keller está en primera línea de fuego del conflicto más largo de la historia de EE.UU.: la guerra contra la droga. 
+                              Su obsesión por derrotar al capo más poderoso, rico y letal del mundo el líder del cártel de Sinaloa, Adán Barrera 
+                              le ha costado cicatrices físicas y mentales, tener que despedir a personas a las que amaba e incluso se ha llevado parte de su alma.
+                           </p>
+                        </div>
+                        <div class="card-action">
+                           <a href="#">Mas detalles</a>
+                        </div>
+                     </div>
+                  </div>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="bx-wrapper">
+         <div class="bx-viewport">
+            <div class="slider" style="transition-duration : 0s; transform: translate3d(-800px,0px,0px);">
+               <div class="slide-o" style="float: left; list-style:none; margin: auto;">
+                  <div class="libro-novedad">
+                     <figure>
+                        <img class="portada" src="https://www.planetadelibros.com/usuaris/libros/fotos/221/m_libros/portada_el-codigo-da-vinci-nueva-edicion_dan-brown_201607291100.jpg" alt="codigo da vinci"/>
+                     </figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <footer class="page-footer">
+         <div class="container">
+            <div class="center row">
+               <div class="col l4 s12">
+                  <h5 class="white-text">Quienes somos</h5>
+                  <p class="grey-text text-lighten-4">
+                     Somos una biblioteca digital donde podrás encontar una amplia variedad de libros, comentarlos con el resto de usuarios, apuntar eventos...
+                  </p>
+               </div>
+               <div class="col l4 offset-l1 s12">
+                  <h5 class="white-text">Ubicación</h5>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3506.8985774735934!2d-16.322677222337415!3d28.48260090236116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m1!1m0!5e0!3m2!1ses!2ses!4v1553097652506" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <p><i class="fas fa-map-marker-alt"></i>Camino San Francisco de Paula</p>
+               </div>
+               <div class="col l2 offset-l1 s12">
+                  <h5 class="white-text">Contactanos</h5>
+                  <ul>
+                     <li><a class="grey-text text-lighten-3" href="#!">
+                        <i class="fab fa-twitter"></i>    
+                        Twitter</a>
+                     </li>
+                     <li><a class="grey-text text-lighten-3" href="#!">
+                        <i class="fab fa-instagram"></i>
+                        Instagram</a>
+                     </li>
+                     <li><a class="grey-text text-lighten-3" href="#!">
+                        <i class="fab fa-facebook"></i>Facebook</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               © 2019 Copyright Text
+            </div>
+         </div>
+      </footer>
+      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="func.js"></script>
+      <script> 
+          const Calender = document.querySelector('.datepicker');
+          M.Datepicker.init(Calender,{});
+      </script>
+   </body> 
 </html>
