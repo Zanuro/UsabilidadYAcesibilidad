@@ -4,6 +4,7 @@ console.log("jeje");
 
 document.getElementById("submit").addEventListener('click',function(){
     var generos=["comedia","aventura","policiaca","historia","ficcion","clasicos"];
+    let bool;
     if(document.getElementById("libro").value === ""){
         document.getElementById("libro").style.borderColor="red";
         document.getElementById("libro")+="Rellena este campo";
@@ -21,9 +22,13 @@ document.getElementById("submit").addEventListener('click',function(){
     if(generos.includes(document.getElementById("genero").value) === false){
         document.getElementById("genero").innerHTML="Rellena este campo con los valores: comedia,aventura,policiaca,historia,ficcion,clasicos";
         document.getElementById("genero").style.borderColor="red";
+        bool=true;
     }
     else{
         document.getElementById("genero").style.borderColor="green";
+    }
+    window.alert("jaja");
+    if(bool=true){
         var refDB = myDatabase.ref().child('libros');
         var refDC = refDB.child(document.getElementById("libro").value);
         var obj={
@@ -34,5 +39,6 @@ document.getElementById("submit").addEventListener('click',function(){
         };
         refDC.set(obj);
     }
+    
 
 })
