@@ -9,6 +9,22 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="style/style.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+        <script>
+         // Initialize Firebase
+         var config = {
+            apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
+            authDomain: "webua1819.firebaseapp.com",
+            databaseURL: "https://webua1819.firebaseio.com",
+            projectId: "webua1819",
+            storageBucket: "webua1819.appspot.com",
+            messagingSenderId: "28657746169"
+         };
+         firebase.initializeApp(config);
+        </script>
     </head>
     <body>
         <nav>
@@ -51,7 +67,7 @@
                     <input type="email" id="mail" name="mail" required>
                     <label for="password">Contraseña</label>
                     <input type="password" id="pass" name="pass" required>
-                    <p>Please select your preferred contact method:</p>
+                    <p>Please select your sex:</p>
                     <p>
                         <label>
                             <input name="group1" type="radio" />
@@ -70,14 +86,15 @@
                             <span>Other</span>
                         </label>
                     </p>
-                    <button>Enviar</button>
+                    <button onclick="storeData()">Enviar</button>
                 </form>
             </div>
         </div>
         
         <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="func.js"></script>    
+      <script type='text/javascript' src="javascript/func.js"></script>
+      <script type='text/javascript' src="javascript/firebase.js"></script>    
     </body>
     <footer class="page-footer">
             <div class="container">
