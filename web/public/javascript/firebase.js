@@ -19,15 +19,14 @@ document.getElementById("submit").addEventListener('click',function(){
     else{
         document.getElementById("nombre").style.borderColor="green";
     }
-    if(generos.includes(document.getElementById("genero").value) === false){
-        document.getElementById("genero").innerHTML="Rellena este campo con los valores: comedia,aventura,policiaca,historia,ficcion,clasicos";
+    if (document.getElementById("genero").validity.patternMismatch){  
+        bool=false;  
         document.getElementById("genero").style.borderColor="red";
+    }  
+    else {  
+        document.getElementById("genero").style.borderColor="green";
         bool=true;
     }
-    else{
-        document.getElementById("genero").style.borderColor="green";
-    }
-    window.alert("jaja");
     if(bool=true){
         var refDB = myDatabase.ref().child('libros');
         var refDC = refDB.child(document.getElementById("libro").value);

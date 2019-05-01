@@ -55,10 +55,10 @@
         <div class="row">
             <div class="col s4 offset-l4">
                 <form class="formulario" action="index.html" method="post">
-                    <p>* Titulo: <input type="text" placeholder="El señor de los Anillos" id="libro"  /></p>
+                    <p>* Titulo: <input type="text" placeholder="El señor de los Anillos" id="libro" required  /></p>
                     <p>* Autor: <input type="text" placeholder="J.R.Tolkien" id="nombre" required /></p>
                     <p>Año: <input type="number" placeholder="1992" id="agnos"></p>
-                    <p>* Genero: <input type="text" placeholder="Aventuras" id="genero" required /></p>
+                    <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" placeholder="Aventuras" id="genero" required /></p>
                     <p>ISBN: <input type="text" id="isbn" placeholder="1578463A5W16E" minlength="13" maxlength="13"></p>
                     <p>
                         <input type="submit" id="submit" value="Enviar">
