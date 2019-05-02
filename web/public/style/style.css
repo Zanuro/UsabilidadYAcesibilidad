@@ -156,11 +156,11 @@ footer {
 }
 
 .formulario ::-moz-placeholder{
-    color: black;
+    color: grey;
 }
 
 .formulario ::-webkit-input-placeholder{
-    color: black;
+    color: grey;
 }
 
 #submit, #reset{
