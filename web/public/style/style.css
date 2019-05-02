@@ -162,3 +162,11 @@ footer {
 .formulario ::-webkit-input-placeholder{
     color: black;
 }
+
+#submit, #reset{
+    position: relative;
+    left: 200px;
+}
+#texto-oblig{
+    text-align: center;
+}

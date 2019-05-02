@@ -54,18 +54,30 @@
         </nav>
         <div class="row">
             <div class="col s4 offset-l4">
-                <form class="formulario" action="index.html" method="post">
+                <form class="formulario" action="añadirlibros.html" method="post">
+                    
                     <p>* Titulo: <input type="text" placeholder="El señor de los Anillos" id="libro" required  /></p>
+                    <span id="alerta-title"> </span>
                     <p>* Autor: <input type="text" placeholder="J.R.Tolkien" id="nombre" required /></p>
+                    <span id="alerta-autor"> </span>
                     <p>Año: <input type="number" placeholder="1992" id="agnos"></p>
+                    <span id="alerta-agno"> </span>
                     <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" placeholder="Aventuras" id="genero" required /></p>
-                    <p>ISBN: <input type="text" id="isbn" placeholder="1578463A5W16E" minlength="13" maxlength="13"></p>
+                    <span id="alerta-genero"> </span>
+                    <p>ISBN: <input type="number" id="isbn" placeholder="1578347859023" minlength="13" maxlength="13"></p>
+                    <span id="alerta-isbn"> </span>
+
+                    <span id="libro-added"> </span>
                     <p>
-                        <input type="submit" id="submit" value="Enviar">
-                        <input type="reset" value="Borrar">
+                        <button class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar">Submit
+                        <i class="material-icons right">send</i>
+                        </button>
+                        <button class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar">Reset
+                        <i class="material-icons right">delete</i>
+                        </button>
                     </p>
                     <br>
-                    <p>Los campos con * son obligatorios</p>
+                    <p id="texto-oblig">Los campos con * son obligatorios</p>
                 </form>
             </div>
         </div>
