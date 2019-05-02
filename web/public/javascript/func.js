@@ -8,10 +8,10 @@ $(document).ready(function() {
 	$('.tabs').tabs();
 });
 */
-document.addEventListener('DOMContentLoaded', function() {
-	var elems = document.querySelectorAll('.dropdown-trigger');
-	var instances = M.Dropdown.init(elems, options);
-});
+//document.addEventListener('DOMContentLoaded', function() {
+//	var elems = document.querySelectorAll('.dropdown-trigger');
+//	var instances = M.Dropdown.init(elems, options);
+//});
 
 
 //window.alert('otro');
@@ -130,7 +130,7 @@ peticion_http.onreadystatechange = function () {
 peticion_http.send();
 });
 
-var email = document.getElementById("mail");
+/*var email = document.getElementById("mail");
 
 email.addEventListener("keyup", function (event) {
   if(email.validity.typeMismatch){
@@ -139,4 +139,4 @@ email.addEventListener("keyup", function (event) {
   else{
 	  email.setCustomValidity("")
   }
-});
+});*/
