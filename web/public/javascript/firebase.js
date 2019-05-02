@@ -110,31 +110,8 @@ document.getElementById("change").addEventListener('click',function(){
     }
 })
 
-function storeData(){
-    var inputemail=document.getElementById("mail").value;
-    var inputpass=document.getElementById("pass").value;
-    var inputname=document.getElementById("name").value;
-    var inputsurname=document.getElementById("surname").value;
-   
-    window.alert("jaja");
-    firebase.auth().createUserWithEmailAndPassword(inputemail, inputpass).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      alert('usuario en uso'); 
-      
-    });
-    var refDB = myDatabase.ref().child('Users');
-    var refDC = refDB.child(document.getElementById("nombre_contacto").value);
-    var obj={
-        name: inputname,
-        email: inputemail,
-        surname: inputsurname 
-    }
-    refDC.set(obj);    
-}
+
+
     
 function signin(){
         var inputemail=document.getElementById("mail").value;

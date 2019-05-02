@@ -11,8 +11,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+
         <script>
          // Initialize Firebase
          var config = {
@@ -86,15 +90,16 @@
                             <span>Other</span>
                         </label>
                     </p>
-                    <button onclick="storeData()">Enviar</button>
+                    <button id="auth">Enviar</button>
                 </form>
             </div>
         </div>
         
         <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script type='text/javascript' src="javascript/func.js"></script>
-      <script type='text/javascript' src="javascript/firebase.js"></script>    
+      <!--<script type='text/javascript' src="javascript/func.js"></script>
+      <script type='text/javascript' src="javascript/firebase.js"></script> -->
+      <script type='text/javascript' src="javascript/auth.js"></script>    
     </body>
     <footer class="page-footer">
             <div class="container">
