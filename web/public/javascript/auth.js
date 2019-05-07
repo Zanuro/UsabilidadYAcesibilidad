@@ -1,21 +1,30 @@
 
-var config = {
-    apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
-    authDomain: "webua1819.firebaseapp.com",
-    databaseURL: "https://webua1819.firebaseio.com",
-    projectId: "webua1819",
-    storageBucket: "webua1819.appspot.com",
-    messagingSenderId: "28657746169"
-};
- 
-firebase.initializeApp(config);
+
 
 function register(){
 //if(document.getElementById("aut").addEventListener('click',function(){
     console.log("entra");
     console.log(document.getElementById("mail").value);
     console.log(document.getElementById("pass").value);
-    firebase.auth().createUserWithEmailAndPassword(document.getElementById("mail").value,document.getElementById("pass").value).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(document.getElementById("mail").value,document.getElementById("pass").value)
+      .then(function(Success){
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+          .then(function() {
+            // Existing and future Auth states are now persisted in the current
+            // session only. Closing the window would clear any existing state even
+            // if a user forgets to sign out.
+            // ...
+            // New sign-in will be persisted with session persistence.
+            return firebase.auth().signInWithEmailAndPassword(email, password);
+            
+          })
+          .catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+          });
+        })
+      .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         console.log(errorCode);
@@ -23,7 +32,8 @@ function register(){
         console.log(errorMessage);
         window.alert(errorMessage);
         // ...
-    });
+      });
+      window.location="index.html";
 }
 
 function signin(){
@@ -32,13 +42,18 @@ function signin(){
     console.log(email);
     var password=document.getElementById("pass").value;
     console.log(password);
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(function(Success){
+        window.location="index.html"
+      })
+      .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
         window.alert(errorMessage);
         // ...
         console.log(errorCode);
-    });
+      });
+    
 }
 

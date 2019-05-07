@@ -16,6 +16,30 @@ $(document).ready(function() {
 
 //window.alert('otro');
 
+var user = firebase.auth().currentUser;
+
+if (user) {
+   console.log("User is signed in.");
+   var list = document.getElementById("barra");   // Get the <ul> element with id="myList"
+   list.removeChild(list.childNodes[7]);
+   list.removeChild(list.childNodes[8]);
+
+} else {
+   console.log("No user is signed in.");
+   var list = document.getElementById("barra");   // Get the <ul> element with id="myList"
+   list.removeChild(list.childNodes[5]); 
+   list.removeChild(list.childNodes[10]);
+}
+
+function logout(){
+	firebase.auth().signOut().then(function() {
+		// Sign-out successful.
+	}).catch(function(error) {
+		console.log(error);
+	});	  
+}
+  
+
 function count_element() {
 	var count,count1,count2 = 0;
 	count = document.getElementsByTagName('p').length;

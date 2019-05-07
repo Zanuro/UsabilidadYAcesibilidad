@@ -1,16 +1,4 @@
 
-var config = {
-    apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
-    authDomain: "webua1819.firebaseapp.com",
-    databaseURL: "https://webua1819.firebaseio.com",
-    projectId: "webua1819",
-    storageBucket: "webua1819.appspot.com",
-    messagingSenderId: "28657746169"
-};
- 
-firebase.initializeApp(config);
-
-
 
 var myDatabase = firebase.database();
 
