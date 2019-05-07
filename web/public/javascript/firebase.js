@@ -1,9 +1,24 @@
+
+var config = {
+    apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
+    authDomain: "webua1819.firebaseapp.com",
+    databaseURL: "https://webua1819.firebaseio.com",
+    projectId: "webua1819",
+    storageBucket: "webua1819.appspot.com",
+    messagingSenderId: "28657746169"
+};
+ 
+firebase.initializeApp(config);
+
+
+
 var myDatabase = firebase.database();
 
 var bool_genero=false;
 var bool_title=false,bool_autor=false,bool_agno=false,bool_isbn=false;
 
-document.getElementById("submit").addEventListener('click',function(){
+if(document.getElementById("submit"))    
+  document.getElementById("submit").addEventListener('click',function(){
     
     var generos=["Comedia","Aventura","Policiaca","Historia","Ficcion","Clasicos"];
     if(document.getElementById("libro").value === ""){
@@ -71,58 +86,7 @@ document.getElementById("submit").addEventListener('click',function(){
 
 })
 
+if(document.getElementById("reset"))
 document.getElementById("reset").addEventListener('click',function(){
     $('#reset').trigger("reset")
 })
-document.getElementById("change").addEventListener('click',function(){
-    var generos=["comedia","aventura","policiaca","historia","ficcion","clasicos"];
-    var bool;
-    if(document.getElementById("libro").value === ""){
-        document.getElementById("libro").style.borderColor="red";
-    }
-    else{
-        document.getElementById("libro").style.borderColor="green";
-    }
-    if(document.getElementById("nombre").value === ""){
-        document.getElementById("nombre").style.borderColor="red";
-    }
-    else{
-        document.getElementById("nombre").style.borderColor="green";
-    }
-    if (document.getElementById("genero").validity.patternMismatch){  
-        bool=false;  
-        document.getElementById("genero").style.borderColor="red";
-    }  
-    else {  
-        document.getElementById("genero").style.borderColor="green";
-        bool=true;
-    }
-    if(bool==true){
-        var refDB = myDatabase.ref().child('libros');
-        var refDC = refDB.child(document.getElementById("libro").value);
-        var obj={
-            autor: document.getElementById("nombre").value,
-            age: document.getElementById("agnos").value,
-            genero: document.getElementById("genero").value,
-            isbn: document.getElementById("isbn").value,
-        };
-        refDC.update(obj);
-    }
-})
-
-
-
-    
-function signin(){
-        var inputemail=document.getElementById("mail").value;
-        var inputpass=document.getElementById("pass").value;
-        
-        firebase.auth().signInWithEmailAndPassword(inputemail, inputpass).catch(function(error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(errorCode);
-            console.log(errorMessage);
-            if(errorMessage==''){alert('autenticacion correcta')}
-            else{alert('autenticacion incorrecta');} 
-            });
-}
