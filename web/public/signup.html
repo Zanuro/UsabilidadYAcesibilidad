@@ -40,7 +40,7 @@
                            <div class="row" id="topbarsearch">
                               <div class="input-field col s6 s12 red-text">
                                  <i class="white-text material-icons prefix"></i>
-                                 <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                                 <input type="text" aria-labelledby="buscar" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
                               </div>
                            </div>
                         </div>
@@ -53,18 +53,18 @@
             <div class="col s4 offset-l4">
                 <div href="index.html" method="POST">
                     <label for="mail">Dirección de correo electrónico</label>
-                    <input type="email" id="mail" name="mail" required>
+                    <input type="email" aria-labelledby="email" id="mail" name="mail" required>
                     <label for="password">Contraseña</label>
-                    <input type="password" id="pass" name="pass" required>
+                    <input type="password" aria-labelledby="constraseña" id="pass" name="pass" required>
                     <button id="signin" onclick="signin()">Enviar</button>
                 </div>
             </div>
         </div>
-        
+
         <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="javascript/auth.js"></script> 
-      <script src="javascript/func.js"></script> 
+      <script src="javascript/auth.js"></script>
+      <script src="javascript/func.js"></script>
     </body>
     <footer class="page-footer">
             <div class="container">
@@ -84,7 +84,7 @@
                           <h5 class="white-text">Contactanos</h5>
                           <ul>
                              <li><a class="grey-text text-lighten-3" href="#!">
-                                <i class="fab fa-twitter"></i>    
+                                <i class="fab fa-twitter"></i>
                                 Twitter</a>
                              </li>
                              <li><a class="grey-text text-lighten-3" href="#!">
@@ -104,5 +104,5 @@
                     </div>
                  </div>
     </footer>
-    
+
 </html>
