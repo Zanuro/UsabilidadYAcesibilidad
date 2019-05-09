@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="style/style.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        
+
         <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
         <script>
@@ -41,7 +41,7 @@
                            <div class="row" id="topbarsearch">
                               <div class="input-field col s6 s12 red-text">
                                  <i class="white-text material-icons prefix"></i>
-                                 <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                                 <input type="text" aria-labelledby="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
                               </div>
                            </div>
                         </div>
@@ -54,29 +54,29 @@
             <div class="col s4 offset-l4">
                 <div class=formulario method="POST" action="index.html">
                     <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" aria-labelledby="nombre" id="name" name="name">
                     <label for="surname">1º Apellido</label>
-                    <input type="text" id="surname1" name="surname1">
+                    <input type="text" aria-labelledby="apellido" id="surname1" name="surname1">
                     <label for="mail">Dirección de correo electrónico</label>
-                    <input type="email" id="mail" name="mail" required>
+                    <input type="email" aria-labelledby="email" aria-required="true" id="mail" name="mail" required>
                     <label for="password">Contraseña</label>
-                    <input type="password" id="pass" name="pass" required>
+                    <input type="password" aria-labelledby="constraseña" aria-required="true" id="pass" name="pass" required>
                     <p>Please select your sex:</p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio" aria-labelledby="sexo masculino"/>
                             <span>Male</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio" aria-labelledby="sexo femenino"/>
                             <span>Female</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio" aria-labelledby="sexo sin especificar"/>
                             <span>Other</span>
                         </label>
                     </p>
@@ -84,13 +84,13 @@
                 </div>
             </div>
         </div>
-        
+
         <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
      <!-- <script type='text/javascript' src="javascript/func.js"></script>-->
      <!-- <script type='text/javascript' src="javascript/firebase.js"></script>-->
-      <script type='text/javascript' src="javascript/auth.js"></script>    
-      <script src="javascript/func.js"></script> 
+      <script type='text/javascript' src="javascript/auth.js"></script>
+      <script src="javascript/func.js"></script>
     </body>
     <footer class="page-footer">
             <div class="container">
@@ -110,7 +110,7 @@
                           <h5 class="white-text">Contactanos</h5>
                           <ul>
                              <li><a class="grey-text text-lighten-3" href="#!">
-                                <i class="fab fa-twitter"></i>    
+                                <i class="fab fa-twitter"></i>
                                 Twitter</a>
                              </li>
                              <li><a class="grey-text text-lighten-3" href="#!">
@@ -130,5 +130,5 @@
                     </div>
                  </div>
     </footer>
-    
+
 </html>
