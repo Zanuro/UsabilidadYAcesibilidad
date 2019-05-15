@@ -16,6 +16,7 @@ $(document).ready(function() {
 
 //window.alert('otro');
 
+
 var user = firebase.auth().currentUser;
 
 if (user) {

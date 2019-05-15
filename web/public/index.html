@@ -33,19 +33,19 @@
          <div class="nav-wrapper">
             <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png"></img></a>
             <ul class="right hide-on-med-and-down" id="barra">
-               <li><a href="novedades.html" aria-labelledby="Ultimas Novedades">Ver Ultimas Novedades</a></li>
-               <li><a href="recomendacion.html" aria-labelledby="Recomendación Libros">Recomendacion de libros</a></li>
-               <li><a href="añadirlibros.html" aria-labelledby="Añadir Libros">Añadir Libros</a></li>
-               <li><a href="login.html" aria-label="Crear Cuenta">Log In</a></li>
-               <li><a href="signup.html" aria-label="Iniciar Sesion">Sign Up</a></li>
-               <li><a href="signup.html" aria-label="Cerrar Sesion">Log Out</a></li>
+               <li><a href="novedades.html" >Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html" >Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" >Añadir Libros</a></li>
+               <li><a href="login.html" >Log In</a></li>
+               <li><a href="signup.html" >Sign Up</a></li>
+               <li><a href="signup.html" >Log Out</a></li>
                <li>
                   <div class="center row">
                      <div class="col s12 ">
                         <div class="row" id="topbarsearch">
                            <div class="input-field col s6 s12 red-text">
                               <i class="white-text material-icons prefix"></i>
-                              <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                              <input type="text" aria-labelledby="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
                            </div>
                         </div>
                      </div>
@@ -64,12 +64,12 @@
          <div class="col s8 offset-s1 m8 offset-m1 l8 offset-l1 xl8 offset-xl1">
             <h1 class = "titulo-aventura"> Aventuras </h1>
             <div id="libros-aventura" class="centre row">
-               <div class="col s12 m12 l12 xl12" role="list">
-                  <ul id="libros" class="tabs tab-demo z-depth-1">
-                     <li id="elemento-libro" class="tab"><a href="codigodavinci.html"><img src="img/codigodavinci.jpg" alt="Codigo da Vinci" role="img"></a><span>Codigo Da Vinci</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem2"><img src="img/desierto.jpg" alt="A traves del desierto" role="img"></a><span>A traves del Desierto</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem3"><img src="img/lobodelmar.jpg" alt="El Lobo del mar" role="img"></a><span>El lobo del mar</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem4"><img src="img/quijote.jpg" alt="Don Quijote de la Mancha" role="img"></a><span>Don Quijote de la Mancha</span></li>
+               <div class="col s12 m12 l12 xl12" >
+                  <ul id="libros" class="tabs tab-demo z-depth-1" role="list">
+                     <li id="elemento-libro" class="tab"><a href="pagweblibro/codigodavinci.html"><img src="img/codigodavinci.jpg" alt="Codigo da Vinci" role="img"></a><span>Codigo Da Vinci</span></li>
+                     <li id="elemento-libro" class="tab"><a href="pagweblibro/desierto.html"><img src="img/desierto.jpg" alt="A traves del desierto" role="img"></a><span>A traves del Desierto</span></li>
+                     <li id="elemento-libro" class="tab"><a href="pagweblibro/lobodelmar.html"><img src="img/lobodelmar.jpg" alt="El Lobo del mar" role="img"></a><span>El lobo del mar</span></li>
+                     <li id="elemento-libro" class="tab"><a href="pagweblibro/quijote.html"><img src="img/quijote.jpg" alt="Don Quijote de la Mancha" role="img"></a><span>Don Quijote de la Mancha</span></li>
                      <li id="elemento-libro" class="tab"><a href="#ejem5"><img src="img/isla_tesoro.jpg" alt="La Isla del Tesoro" role="img"></a><span>La isla del tesoro</span></li>
                      <li id="elemento-libro" class="tab"><a href="#ejem6"><img src="img/prisionerozenda.jpg" alt="El Prisionero de Zenda" role="img"></a><span>El prisionero de Zenda</span></li>
                      <li id="elemento-libro" class="tab"><a href="#ejem7"><img src="img/ronin.jpg" alt="Ronin" role="img"></a><span>Ronin</span></li>
@@ -118,8 +118,8 @@
          <div class="col s8 offset-s1 m8 offset-m1 l8 offset-l1 xl8 offset-xl1">
             <h1 class = "titulo-aventura"> Policiaca </h1>
             <div id="libros-policiaca" class="centre row">
-               <div class="col s12 m12 l12 xl12" role="list">
-                  <ul id="libros" class="tabs tab-demo z-depth-1">
+               <div class="col s12 m12 l12 xl12" >
+                  <ul id="libros" class="tabs tab-demo z-depth-1" role="list">
                      <li id="elemento-libro" class="tab"><a href="#ejem1"><img src="img/zorro.jpeg" alt="Zorro" role="img"></a><span>Zorro</span></li>
                      <li id="elemento-libro" class="tab"><a href="#ejem2"><img src="img/espinas.jpeg" alt="El lenguaje de espinas" role="img"></a><span>El lenguaje de espinas</span></li>
                      <li id="elemento-libro" class="tab"><a href="#ejem3"><img src="img/visitante.jpeg" alt="Visitante" role="img"></a><span>Visitante</span></li>
@@ -149,11 +149,12 @@
          </div>-->
          <div class="col s3 m3 l3 xl3">
             <h3> Calendario </h3>
-            <form>
+            <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Atlantic%2FCanary&amp;src=cmVhZGNsdWJ1bGxAZ21haWwuY29t&amp;src=aG9uYWU0OXM4dDh1ZWs5NGp2M20zNDI0bmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;color=%23C0CA33" style="border-width:0" width="300" height="300" frameborder="0" scrolling="yes"></iframe>
+            <!--<form>
             <div class="input-field">
                 <input type="text" class="datepicker">
             </div>
-            </form>
+            </form>-->
       </div>
       </div>
       <div id="row-novedades" class="center row">
