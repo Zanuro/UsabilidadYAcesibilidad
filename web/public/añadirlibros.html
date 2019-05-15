@@ -25,23 +25,23 @@
     </script>
     </head>
     <body>
-      <nav>
+      <nav role="navigation" aria-label="Top Menu Bar">
          <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png"></img></a>
-            <ul class="right hide-on-med-and-down" id="barra">
-               <li><a href="novedades.html">Ver Ultimas Novedades</a></li>
-               <li><a href="recomendacion.html">Recomendacion de libros</a></li>
-               <li><a href="añadirlibros.html">Añadir Libros</a></li>
-               <li><a href="login.html">Log In</a></li>
-               <li><a href="signup.html">Sign Up</a></li>
-               <li><a href="signup.html">Log Out</a></li>
-               <li>
+            <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png" role="banner" tabindex="0"></img></a>
+            <ul class="right hide-on-med-and-down" id="barra" role="menubar" aria-label = "Menu bar">
+               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false">Ver Ultimas Novedades </a></li>
+               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false">Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false">Añadir Libros</a></li>
+               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false">Login</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false">Registrarse</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false">Log Out</a></li>
+               <li role="none">
                   <div class="center row">
                      <div class="col s12 ">
                         <div class="row" id="topbarsearch">
                            <div class="input-field col s6 s12 red-text">
                               <i class="white-text material-icons prefix"></i>
-                              <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                              <input role="search" aria-label="Search Bar" type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
                            </div>
                         </div>
                      </div>
@@ -52,25 +52,24 @@
       </nav>
         <div class="row">
             <div class="col s4 offset-l4">
-                <form class="formulario" action="añadirlibros.html" method="post">
+                <form role="form" class="formulario" action="añadirlibros.html" aria-label="Formulario añadir libros" method="post">
                     
-                    <p>* Titulo: <input type="text" placeholder="El señor de los Anillos" id="libro" required  /></p>
-                    <span id="alerta-title"> </span>
-                    <p>* Autor: <input type="text" placeholder="J.R.Tolkien" id="nombre" required /></p>
-                    <span id="alerta-autor"> </span>
-                    <p>Año: <input type="number" placeholder="1992" id="agnos"></p>
-                    <span id="alerta-agno"> </span>
-                    <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" placeholder="Aventuras" id="genero" required /></p>
-                    <span id="alerta-genero"> </span>
-                    <p>ISBN: <input type="number" id="isbn" placeholder="1578347859023" minlength="13" maxlength="13"></p>
-                    <span id="alerta-isbn"> </span>
-
+                    <p>* Titulo: <input type="text" aria-placeholder="El señor de los Anillos" id="libro" aria-required="true" aria-describedby="alerta-title" role="alert" aria-live="assertive"/></p>
+                    <span id="alerta-title" role="tooltip" aria-live="assertive"> </span>
+                    <p>* Autor: <input type="text" aria-placeholder="J.R.Tolkien" id="nombre" aria-required="true" aria-describedby="alerta-autor" role="alert" aria-live="assertive"/></p>
+                    <span id="alerta-autor" role="tooltip" aria-live="assertive"> </span>
+                    <p>Año: <input type="number" aria-placeholder="1992" id="agnos" aria-describedby="alerta-agno" role="alert" aria-live="assertive"></p>
+                    <span id="alerta-agno" role="tooltip" aria-live="assertive"> </span>
+                    <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" aria-placeholder="Aventuras" id="genero" aria-required="true" aria-describedby="alerta-genero" role="alert" aria-live="assertive" /></p>
+                    <span id="alerta-genero" role="tooltip" aria-live="assertive"> </span>
+                    <p>ISBN: <input type="number" id="isbn" aria-placeholder="1578347859023" minlength="13" maxlength="13" aria-describedby="alerta-isbn" role="alert" aria-live="assertive"></p>
+                    <span id="alerta-isbn" role="tooltip"aria-live="assertive"> </span>
                     <span id="libro-added"> </span>
                     <p>
-                        <button class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar">Submit
+                        <button role="button" aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar" alt="Boton Submit">Submit
                         <i class="material-icons right">send</i>
                         </button>
-                        <button class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar">Reset
+                        <button role="button" aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar" alt="Boton Reset">Reset
                         <i class="material-icons right">delete</i>
                         </button>
                     </p>
@@ -80,7 +79,7 @@
             </div>
         </div>
     </body>
-    <footer class="page-footer">
+    <footer class="page-footer" role="contentinfo" aria-label="Footer">
         <div class="container">
            <div class="center row">
               <div class="col l4 s12">

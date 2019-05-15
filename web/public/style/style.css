@@ -174,3 +174,9 @@ footer {
 .text-libro{
     font-size: 30px
 }
+[role="button"]:hover,
+[role="button"]:focus,
+[role="button"]:active {   
+   background-color: white;
+   color: navy;
+} 
