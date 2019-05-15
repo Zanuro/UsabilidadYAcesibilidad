@@ -8,32 +8,16 @@ function register(){
     console.log(document.getElementById("pass").value);
     firebase.auth().createUserWithEmailAndPassword(document.getElementById("mail").value,document.getElementById("pass").value)
       .then(function(Success){
-        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-          .then(function() {
-            // Existing and future Auth states are now persisted in the current
-            // session only. Closing the window would clear any existing state even
-            // if a user forgets to sign out.
-            // ...
-            // New sign-in will be persisted with session persistence.
-            return firebase.auth().signInWithEmailAndPassword(email, password);
-            
-          })
-          .catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-          });
-        })
+        window.location="index.html"
+      })
       .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
-        console.log(errorCode);
         var errorMessage = error.message;
-        console.log(errorMessage);
         window.alert(errorMessage);
         // ...
+        console.log(errorCode);
       });
-      window.location="index.html";
 }
 
 function signin(){
