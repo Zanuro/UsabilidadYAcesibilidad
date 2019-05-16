@@ -25,7 +25,7 @@
     </script>
     </head>
     <body>
-      <nav role="navigation" aria-label="Top Menu Bar">
+      <nav aria-label="Top Menu Bar">
          <div class="nav-wrapper">
             <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png" role="banner" tabindex="0"></img></a>
             <ul class="right hide-on-med-and-down" id="barra" role="menubar" aria-label = "Menu bar">
@@ -41,7 +41,7 @@
                         <div class="row" id="topbarsearch">
                            <div class="input-field col s6 s12 red-text">
                               <i class="white-text material-icons prefix"></i>
-                              <input role="search" aria-label="Search Bar" type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                              <input role="search" aria-label="Search Bar" type="text" aria-placeholder="search" id="autocomplete-input" class="autocomplete white-text">
                            </div>
                         </div>
                      </div>
@@ -52,7 +52,7 @@
       </nav>
         <div class="row">
             <div class="col s4 offset-l4">
-                <form role="form" class="formulario" aria-label="Formulario añadir libros" method="post" onsubmit="return false">
+                <form class="formulario" aria-label="Formulario añadir libros" method="post" onsubmit="return false">
                     
                     <p>* Titulo: <input type="text" aria-placeholder="El señor de los Anillos" id="libro" aria-required="true" aria-describedby="alerta-title" aria-live="assertive" aria-label="Titulo libro"/></p>
                     <span id="alerta-title" role="tooltip" aria-live="assertive"> </span>
@@ -60,16 +60,16 @@
                     <span id="alerta-autor" role="tooltip" aria-live="assertive"> </span>
                     <p>Año: <input type="number" aria-placeholder="1992" id="agnos" aria-describedby="alerta-agno" aria-live="assertive" aria-label="Año libro"></p>
                     <span id="alerta-agno" role="tooltip" aria-live="assertive"> </span>
-                    <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" aria-placeholder="Aventuras" id="genero" aria-required="true" aria-describedby="alerta-genero" role="alert" aria-live="assertive" aria-label="Genero libro"/></p>
+                    <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" aria-placeholder="Aventuras" id="genero" aria-required="true" aria-describedby="alerta-genero" aria-live="assertive" aria-label="Genero libro"/></p>
                     <span id="alerta-genero" role="tooltip" aria-live="assertive"> </span>
-                    <p>ISBN: <input type="number" id="isbn" aria-placeholder="1578347859023" minlength="13" maxlength="13" aria-describedby="alerta-isbn" r\ aria-live="assertive" aria-label="ISBN libro"></p>
+                    <p>ISBN: <input type="number" id="isbn" aria-placeholder="1578347859023" minlength="13" maxlength="13" aria-describedby="alerta-isbn" aria-live="assertive" aria-label="ISBN libro"></p>
                     <span id="alerta-isbn" role="tooltip"aria-live="assertive"> </span>
                     <span id="libro-added"> </span>
                     <p>
-                        <button role="button" aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar" alt="Boton Submit">Submit
+                        <button aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar" alt="Boton Submit">Submit
                         <i class="material-icons right">send</i>
                         </button>
-                        <button role="button" aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar" alt="Boton Reset">Reset
+                        <button aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar" alt="Boton Reset">Reset
                         <i class="material-icons right">delete</i>
                         </button>
                     </p>
