@@ -180,3 +180,10 @@ footer {
    background-color: white;
    color: navy;
 } 
+
+[role="menuitem"]:hover,
+[role="menuitem"]:focus,
+[role="menuitem"]:active {   
+   background-color: white;
+   color: navy;
+} 
