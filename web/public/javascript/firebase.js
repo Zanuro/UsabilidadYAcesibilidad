@@ -5,7 +5,6 @@ var myDatabase = firebase.database();
 var bool_genero=false;
 var bool_title=false,bool_autor=false,bool_agno=false,bool_isbn=false;
 
-if(document.getElementById("submit"))    
   document.getElementById("submit").addEventListener('click',function(){
     
     var generos=["Comedia","Aventura","Policiaca","Historia","Ficcion","Clasicos"];
@@ -74,7 +73,6 @@ if(document.getElementById("submit"))
 
 })
 
-if(document.getElementById("reset"))
 document.getElementById("reset").addEventListener('click',function(){
     $('#reset').trigger("reset")
 })
