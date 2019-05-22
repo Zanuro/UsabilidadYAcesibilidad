@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <title>Club de la Lectura</title>
+      <meta http-equiv="content-type"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes"/>
+      <meta charset="UTF-8"/>
+      <link rel="shortcut icon" type="image/x-icon" href="img/icon.ico"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="../style/style.css"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
+      <script>
+         // Initialize Firebase
+         var config = {
+            apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
+            authDomain: "webua1819.firebaseapp.com",
+            databaseURL: "https://webua1819.firebaseio.com",
+            projectId: "webua1819",
+            storageBucket: "webua1819.appspot.com",
+            messagingSenderId: "28657746169"
+         };
+         firebase.initializeApp(config);
+      </script>
+   </head>
+   <body>
+      <nav role="navigation">
+         <div class="nav-wrapper">
+            <a href="../index.html" class="brand-logo"><img id="logo-pag" src="../img/logo-b.png"></img></a>
+            <ul class="right hide-on-med-and-down" id="barra">
+               <li><a href="novedades.html" >Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html" >Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" >Añadir Libros</a></li>
+               <li><a href="login.html" >Log In</a></li>
+               <li><a href="signup.html" >Sign Up</a></li>
+               <li><a href="signup.html" >Log Out</a></li>
+               <li>
+                  <div class="center row">
+                     <div class="col s12 ">
+                        <div class="row" id="topbarsearch">
+                           <div class="input-field col s6 s12 red-text">
+                              <i class="white-text material-icons prefix"></i>
+                              <input type="text" aria-labelledby="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="row">
+         <div class="col s12 m12 l12 xl12">
+            <h1>El Prisionero de Zenda</h1>
+         </div>
+      </div>
+      <div class="row">
+          <div class="col s6">
+              <img src="../img/prisionerozenda.jpg" alt="Libro El Prisionero de Zenda" height="500" width="500">
+          </div>
+          <div class="col s6">
+             <div class="text-libro">
+               <p><b>Autor:</b>Anthony Hope Hawkins</p>
+               <p><b>Año:</b>1894</p>
+               <p><b>Genero:</b>Aventura</p>
+               <p><b>ISBN:</b>9788466794992</p>
+               <p><b>Páginas:</b>168</p>
+               <p><b>Editorial:</b>J. W. Arrowsmith</p>
+               <p></p>
+             </div>
+          </div>
+      </div>
+      <div class="row">
+         <div class="col s12 m12 l12 xl12">
+            <h2>Sinopsis:</h2>
+         </div>
+      </div>
+      <div class="row">
+            <div class="col s12 m12 l12 xl12">
+            <p>
+                El prisionero de Zenda, el gran clásico de la novela de capa y espada, en una cuidada edición especial con introducción de Arturo Pérez-Reverte.Rudolf Rassendyll es un joven y adinerado noble que vive apaciblemente en Inglaterra sin otra preocupación que su propio entretenimiento. Cuando decide viajar al reino de Ruritania para asistir a la coronación del rey Rudolf V, poco sospecha que se enfrentará a un reto mayor del que jamás hubiese podido soñar.El futuro monarca es secuestrado la víspera de la ceremonia por su hermano, el duque Michael, señor de Zenda y segundo en la línea de sucesión, y el joven Rassendyll, que guarda con Rudolf V un asombroso parecido, deberá ponerse en su piel para evitar que pierda el derecho al trono. De la noche a la mañana, se convertirá en el soberano de todo un país, en el prometido de la hermosa princesa Flavia y en la única persona capaz de devolver al legítimo rey su corona.Reseña:«Una aventura apasionante, un folletín a la antigua, en el mejor sentido del término, que no puede dejar de leerse con una sonrisa agradecida y cómplice.»Arturo Pérez-Reverte
+            </p>
+            </div>
+         </div>
+      <footer class="page-footer">
+         <div class="container">
+            <div class="center row">
+               <div class="col l4 s12">
+                  <h5 class="white-text">Quienes somos</h5>
+                  <p class="grey-text text-lighten-4">
+                     Somos una biblioteca digital donde podrás encontar una amplia variedad de libros, comentarlos con el resto de usuarios, apuntar eventos...
+                  </p>
+               </div>
+               <div class="col l4 offset-l1 s12">
+                  <h5 class="white-text">Ubicación</h5>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3506.8985774735934!2d-16.322677222337415!3d28.48260090236116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m1!1m0!5e0!3m2!1ses!2ses!4v1553097652506" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <p><i class="fas fa-map-marker-alt"></i>Camino San Francisco de Paula</p>
+               </div>
+               <div class="col l2 offset-l1 s12">
+                  <h5 class="white-text">Contactanos</h5>
+                  <ul>
+                     <li><a class="grey-text text-lighten-3" href="#!">
+                        <i class="fab fa-twitter"></i>    
+                        Twitter</a>
+                     </li>
+                     <li><a class="grey-text text-lighten-3" href="#!">
+                        <i class="fab fa-instagram"></i>
+                        Instagram</a>
+                     </li>
+                     <li><a class="grey-text text-lighten-3" href="#!">
+                        <i class="fab fa-facebook"></i>Facebook</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               © 2019 Copyright Text
+            </div>
+         </div>
+      </footer>
+      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script type='text/javascript' src="../javascript/func.js"></script>
+   </body>
+</html>

@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 //window.alert('otro');
 
-
+/*
 var user = firebase.auth().currentUser;
 
 if (user) {
@@ -31,7 +31,7 @@ if (user) {
    list.removeChild(list.childNodes[5]); 
    list.removeChild(list.childNodes[10]);
 }
-
+*/
 function logout(){
 	firebase.auth().signOut().then(function() {
 		// Sign-out successful.
