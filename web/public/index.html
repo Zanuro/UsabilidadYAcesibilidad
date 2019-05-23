@@ -10,7 +10,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <link rel="stylesheet" type="text/css" href="style/style.css"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <!-- Global site tag (gtag.js) - Google Analytics --> 
+      <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131489316-3"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
@@ -34,6 +34,15 @@
             messagingSenderId: "28657746169"
          };
          firebase.initializeApp(config);
+      </script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131489316-3"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131489316-3', { 'optimize_id': 'GTM-PKTQHB3'});
       </script>
    </head>
    <body>
@@ -148,7 +157,7 @@
                            <img src="img/sofia.jpg" alt="Sofia" role="img"></img>
                         </div>
                         <div class="card-content">
-                           <p id="sinopsis" aria-labelledby="sinopsis">La anodina vida de Sofía y Daniel cambia radicalmente cuando él recibe una carta anónima en la que se le dice que Sagrario, a la que venera, 
+                           <p id="sinopsis" aria-labelledby="sinopsis">La anodina vida de Sofía y Daniel cambia radicalmente cuando él recibe una carta anónima en la que se le dice que Sagrario, a la que venera,
                               no es su verdadera madre y que si quiere conocer la verdad de su origen debe ir a París esa misma noche.
                            </p>
                         </div>
@@ -163,7 +172,7 @@
                            <img id="id-circe" src="img/circe.jpg" alt="circe" role="img"></img>
                         </div>
                         <div class="card-content">
-                           <p id="sinopsis" aria-labelledby="sinopsis">En el palacio de Helios, dios del sol y el más poderoso de los titanes, nace una niña. Pero Circe es una niña rara: carece de los poderes de su padre y 
+                           <p id="sinopsis" aria-labelledby="sinopsis">En el palacio de Helios, dios del sol y el más poderoso de los titanes, nace una niña. Pero Circe es una niña rara: carece de los poderes de su padre y
                               de la agresiva capacidad de seducción de su madre. Cuando acude al mundo de los mortales en busca de compañía, descubre que sí posee un poder,
                               el poder de la brujería, con el que puede transformar a sus rivales en monstruos y amenazar a los mismísimos dioses.
                            </p>
@@ -179,8 +188,8 @@
                            <img id="id-proposito" src="img/proposito.jpg" alt="Proposito" role="img"></img>
                         </div>
                         <div class="card-content">
-                           <p id="sinopsis" aria-labelledby="sinopsis">Jaime Lorente nos presenta A propósito de tu boca, un poemario que lleva escribiendo desde que iba al colegio. Un texto personal 
-                              y sensible sobre su visión del amor y de su forma de experimentarlo y vivirlo. 
+                           <p id="sinopsis" aria-labelledby="sinopsis">Jaime Lorente nos presenta A propósito de tu boca, un poemario que lleva escribiendo desde que iba al colegio. Un texto personal
+                              y sensible sobre su visión del amor y de su forma de experimentarlo y vivirlo.
                               En el libro conviven dos mundos muy extremos, uno muy blanco y otro más oscuro, que pertenecen a lo más íntimo del autor.
                            </p>
                         </div>
@@ -196,8 +205,8 @@
                         </div>
                         <div class="card-content">
                            <p id="sinopsis" aria-labelledby="sinopsis">La guerra ha llegado a casa.
-                              Hace cuarenta años que Art Keller está en primera línea de fuego del conflicto más largo de la historia de EE.UU.: la guerra contra la droga. 
-                              Su obsesión por derrotar al capo más poderoso, rico y letal del mundo el líder del cártel de Sinaloa, Adán Barrera 
+                              Hace cuarenta años que Art Keller está en primera línea de fuego del conflicto más largo de la historia de EE.UU.: la guerra contra la droga.
+                              Su obsesión por derrotar al capo más poderoso, rico y letal del mundo el líder del cártel de Sinaloa, Adán Barrera
                               le ha costado cicatrices físicas y mentales, tener que despedir a personas a las que amaba e incluso se ha llevado parte de su alma.
                            </p>
                         </div>
@@ -243,7 +252,7 @@
                   <h5 class="white-text">Contactanos</h5>
                   <ul>
                      <li><a class="grey-text text-lighten-3" href="https://twitter.com/ElclubdelaLect1">
-                        <i class="fab fa-twitter"></i>    
+                        <i class="fab fa-twitter"></i>
                         Twitter</a>
                      </li>
                      <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/readclubull/">
@@ -263,9 +272,9 @@
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script type='text/javascript' src="javascript/func.js"></script>
-      <script> 
+      <script>
           const Calender = document.querySelector('.datepicker');
           M.Datepicker.init(Calender,{});
       </script>
-   </body> 
+   </body>
 </html>
