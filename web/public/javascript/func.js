@@ -16,29 +16,33 @@ $(document).ready(function() {
 
 //window.alert('otro');
 
-/*
-var user = firebase.auth().currentUser;
 
-if (user) {
-   console.log("User is signed in.");
-   var list = document.getElementById("barra");   // Get the <ul> element with id="myList"
-   list.removeChild(list.childNodes[7]);
-   list.removeChild(list.childNodes[8]);
+firebase.auth().onAuthStateChanged(function(user) {
+	if (user) {
+		console.log("User is signed in.");
+		var list = document.getElementById("barra");   // Get the <ul> element with id="myList"
+		list.removeChild(list.childNodes[7]);
+		list.removeChild(list.childNodes[8]);
+	} else {
+		console.log("No user is signed in.");
+		var list = document.getElementById("barra");   // Get the <ul> element with id="myList"
+		list.removeChild(list.childNodes[5]); 
+		list.removeChild(list.childNodes[10]);
+	}
+});
 
-} else {
-   console.log("No user is signed in.");
-   var list = document.getElementById("barra");   // Get the <ul> element with id="myList"
-   list.removeChild(list.childNodes[5]); 
-   list.removeChild(list.childNodes[10]);
-}
-*/
-function logout(){
+var logou = document.getElementById("logout");
+
+logou.addEventListener("click", function (event) {
+	console.log("jeje");
 	firebase.auth().signOut().then(function() {
-		// Sign-out successful.
+		console.log("jaja");
+		window.alert("el usuario ha cerrado sesión");
+		window.location="index.html";
 	}).catch(function(error) {
 		console.log(error);
 	});	  
-}
+});
   
 
 function count_element() {
