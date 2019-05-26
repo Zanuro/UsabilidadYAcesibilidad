@@ -34,9 +34,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 var logou = document.getElementById("logout");
 
 logou.addEventListener("click", function (event) {
-	console.log("jeje");
 	firebase.auth().signOut().then(function() {
-		console.log("jaja");
 		window.alert("el usuario ha cerrado sesión");
 		window.location="index.html";
 	}).catch(function(error) {
