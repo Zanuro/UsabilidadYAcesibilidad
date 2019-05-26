@@ -4,7 +4,7 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 nav{
@@ -29,25 +29,25 @@ nav{
     position: relative;
     top: -5.1%;
  }
- 
+
  body {
    padding: 0%;
    margin: 0%;
- } 
+ }
  footer iframe {
-   width: "100"; 
+   width: "100";
    height: "75";
- 
+
  }
  html {
    margin-top:0%;
    padding:0%;
  }
- 
+
  .buscador-libro{
    color: wheat;
  }
- 
+
  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #769DE8;
   opacity: 1; /* Firefox */
@@ -188,10 +188,10 @@ footer {
     resize: none;
 }
 #boton_registro{
-    
+
     margin-left: 24%;
     margin-bottom: 3%;
-    
+
 }
 
 .formulario ::-moz-placeholder{
@@ -215,17 +215,17 @@ footer {
 }
 [role="button"]:hover,
 [role="button"]:focus,
-[role="button"]:active {   
+[role="button"]:active {
    background-color: white;
    color: navy;
-} 
+}
 
 [role="menuitem"]:hover,
 [role="menuitem"]:focus,
-[role="menuitem"]:active {   
+[role="menuitem"]:active {
    background-color: white;
    color: navy;
-} 
+}
 
 @media (max-width: 480px ){
     p{
@@ -247,7 +247,7 @@ footer {
         size: 10%;
     }
 }
-@media (min-width: 768px) and (max-width: 1199px) { 
+@media (min-width: 768px) and (max-width: 1199px) {
     p{
         font-size: 50%;
     }
@@ -255,12 +255,12 @@ footer {
         width:25%;
         height:25%;
         size: 10%;
-    } 
+    }
  }
 #miiframe{
     width: 100%;
     height: 100%;
-    
+
 
 }
 
@@ -272,18 +272,18 @@ iframe {
 /* CSS pantalla 768px o superior */
 /*
   @media (min-width: 768px) {
-  
+
     .mi-iframe {
       width: 500px;
       height: 350px;
-    } 
-  
+    }
+
   }*/
 
   body {
     -webkit-animation: bugfix infinite 1s;
   }
-  
+
   @-webkit-keyframes bugfix {
     from {
       padding: 0;
@@ -297,7 +297,7 @@ iframe {
     top: -9999px;
     left: -9999px;
   }
-  
+
   label {
     /*display: none;*/
     cursor: pointer;
@@ -312,17 +312,17 @@ iframe {
   ::-webkit-input-placeholder {
     text-align: center;
  }
- 
+
  :-moz-placeholder { /* Firefox 18- */
-    text-align: center;  
+    text-align: center;
  }
- 
+
  ::-moz-placeholder {  /* Firefox 19+ */
-    text-align: center;  
+    text-align: center;
  }
- 
- :-ms-input-placeholder {  
-    text-align: center; 
+
+ :-ms-input-placeholder {
+    text-align: center;
  }
 
   @media screen and (max-width: 800px) {
@@ -370,7 +370,7 @@ iframe {
   .titulo-policiaca{
     text-align: left;
   }
-  
+
   #libros-policiaca #elemento-libro{
     height: inherit;
     width: 50%;
