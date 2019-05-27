@@ -475,10 +475,340 @@
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script type='text/javascript' src="javascript/func.js"></script>
+      <script type='text/javascript' src="javascript/firebase.js"></script>
       <script type='text/javascript' src="javascript/search.js"></script>
       <script>
-          const Calender = document.querySelector('.datepicker');
-          M.Datepicker.init(Calender,{});
+          window.onload = function() {
+             add_libros_to_list();
+          };
+
+          function add_libros_to_list(){
+
+                var  ul, li, a, i,txtValue;
+                var lista = [];
+                ul = document.getElementById("lista-libros");
+                li = ul.getElementsByTagName('li');
+
+                for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("span")[0];
+                txtValue = a.textContent || a.innerText;
+                txtValue = txtValue.replace("more_vert"," ");
+                lista.push(txtValue);
+                }
+
+                var librosRef = myDatabase.ref('libros');
+                var refDB = myDatabase.ref().child('libros');
+                refDB.on('value', function(snapshot) {
+                
+                snapshot.forEach(function(childSnapshot) {
+                var childData = childSnapshot.key;
+                ul = document.getElementById("lista-libros");
+                li = ul.getElementsByTagName('li');
+                var elems = li.length;
+
+                if (lista.includes(childData) == false){
+
+                    
+                    if(childSnapshot.val().imagen == null ){
+                        var src = "https://bit.ly/2I05h6Q";
+                        console.log("aaaa");
+                    }
+                    else{
+                        var src = childSnapshot.val().imagen;
+                    }
+                        
+                    if(elems % 3 == 0){
+                        //anadir primero
+
+                    var root = document.getElementById("lista-libros");
+
+                    var li = document.createElement("li");
+                    root.appendChild(li);
+                    
+                    var div1 = document.createElement('div');
+                    div1.className = "col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2";
+                    
+                    var elem1 = li.appendChild(div1);
+
+                    var div2 = document.createElement('div');
+                    div2.className = "card";
+
+                    var elem2 = elem1.appendChild(div2);
+                    
+                    var div3 = document.createElement('div');
+                    div3.className = "card-image waves-effect waves-block waves-light";
+                    
+                    var elem3 = elem2.appendChild(div3);
+
+                    var img1 = document.createElement('img');
+                    img1.className = "activator responsive-img";
+                    console.log(childSnapshot.val().imagen);
+                    img1.src = src;
+
+                    var elem4 = elem3.appendChild(img1);
+
+                    var div4 = document.createElement('div');
+                    div4.className = "card-content";
+
+                    var elem5 = elem2.appendChild(div4);
+
+                    var span1 = document.createElement('span');
+                    span1.className = "card-title activator grey-text text-darken-4";
+                    span1.style.fontSize = "20px";
+
+                    span1.textContent=`${childData}`;
+                    
+                    var elem6 = elem5.appendChild(span1);
+
+                    var i1 = document.createElement('i');
+                    i1.className = "material-icons right";
+
+                    i1.textContent="more_vert";
+                    
+                    var elem7 = elem6.appendChild(i1);
+                    
+
+                    var div5 = document.createElement('div');
+                    div5.className = "card-reveal";
+
+                    var elem8 = elem2.appendChild(div5);
+
+                    var span2 = document.createElement('span');
+                    span2.className = "card-title grey-text text-darken-4";
+                    span2.style.fontSize = "20px";
+                    span2.style.textAlign = "left";
+
+                    span2.textContent=`${childData}`;
+                    
+                    var elem9 = elem8.appendChild(span2);
+
+                    var i2 = document.createElement('i');
+                    i2.className = "material-icons right";
+
+                    i2.textContent="close";
+                    
+                    var elem9 = elem9.appendChild(i2);
+
+                    var br = document.createElement('br');
+
+                    var elem9 = elem8.appendChild(br);
+
+                    var p1 = document.createElement('p');
+
+                    p1.innerHTML = "No hay informacion disponible.";
+
+                    var elem10 = elem8.appendChild(p1);
+                    
+                    var p2 = document.createElement('p');
+
+                    var elem11 = elem8.appendChild(p2);
+
+                    var a1 = document.createElement('a');
+
+                    a1.href = "https://www.amazon.com";
+                    a1.style.fontSize = "20px";
+                    a1.textContent=`${childData}`;
+
+                    var elem12 = elem11.appendChild(a1);
+
+                    }
+
+                    else if(elems % 3 == 1){
+                        //anadir centro
+
+                    var root = document.getElementById("lista-libros");
+
+                    var li = document.createElement("li");
+                    root.appendChild(li);
+                    
+                    var div1 = document.createElement('div');
+                    div1.className = "col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1";
+                    
+                    var elem1 = li.appendChild(div1);
+
+                    var div2 = document.createElement('div');
+                    div2.className = "card";
+
+                    var elem2 = elem1.appendChild(div2);
+                    
+                    var div3 = document.createElement('div');
+                    div3.className = "card-image waves-effect waves-block waves-light";
+                    
+                    var elem3 = elem2.appendChild(div3);
+
+                    var img1 = document.createElement('img');
+                    img1.className = "activator responsive-img";
+                    img1.src = src;
+
+                    var elem4 = elem3.appendChild(img1);
+
+                    var div4 = document.createElement('div');
+                    div4.className = "card-content";
+
+                    var elem5 = elem2.appendChild(div4);
+
+                    var span1 = document.createElement('span');
+                    span1.className = "card-title activator grey-text text-darken-4";
+                    span1.style.fontSize = "20px";
+
+                    span1.textContent=`${childData}`;
+                    
+                    var elem6 = elem5.appendChild(span1);
+
+                    var i1 = document.createElement('i');
+                    i1.className = "material-icons right";
+
+                    i1.textContent="more_vert";
+                    
+                    var elem7 = elem6.appendChild(i1);
+                    
+
+                    var div5 = document.createElement('div');
+                    div5.className = "card-reveal";
+
+                    var elem8 = elem2.appendChild(div5);
+
+                    var span2 = document.createElement('span');
+                    span2.className = "card-title grey-text text-darken-4";
+                    span2.style.fontSize = "20px";
+                    span2.style.textAlign = "left";
+
+                    span2.textContent=`${childData}`;
+                    
+                    var elem9 = elem8.appendChild(span2);
+
+                    var i2 = document.createElement('i');
+                    i2.className = "material-icons right";
+
+                    i2.textContent="close";
+                    
+                    var elem9 = elem9.appendChild(i2);
+
+                    var br = document.createElement('br');
+
+                    var elem9 = elem8.appendChild(br);
+
+                    var p1 = document.createElement('p');
+
+                    p1.innerHTML = "No hay informacion disponible.";
+
+                    var elem10 = elem8.appendChild(p1);
+                    
+                    var p2 = document.createElement('p');
+
+                    var elem11 = elem8.appendChild(p2);
+
+                    var a1 = document.createElement('a');
+
+                    a1.href = "https://www.amazon.com";
+                    a1.style.fontSize = "20px";
+                    a1.textContent=`${childData}`;
+
+                    var elem12 = elem11.appendChild(a1);
+
+                    }
+
+                    else if(elems % 3 == 2){
+                        //anadir ultimo
+
+                    var root = document.getElementById("lista-libros");
+
+                    var li = document.createElement("li");
+                    root.appendChild(li);
+                    
+                    var div1 = document.createElement('div');
+                    div1.className = "col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1";
+                    
+                    var elem1 = li.appendChild(div1);
+
+                    var div2 = document.createElement('div');
+                    div2.className = "card";
+
+                    var elem2 = elem1.appendChild(div2);
+                    
+                    var div3 = document.createElement('div');
+                    div3.className = "card-image waves-effect waves-block waves-light";
+                    
+                    var elem3 = elem2.appendChild(div3);
+
+                    var img1 = document.createElement('img');
+                    img1.className = "activator responsive-img";
+                    img1.src = src;
+
+                    var elem4 = elem3.appendChild(img1);
+
+                    var div4 = document.createElement('div');
+                    div4.className = "card-content";
+
+                    var elem5 = elem2.appendChild(div4);
+
+                    var span1 = document.createElement('span');
+                    span1.className = "card-title activator grey-text text-darken-4";
+                    span1.style.fontSize = "20px";
+
+                    span1.textContent=`${childData}`;
+                    
+                    var elem6 = elem5.appendChild(span1);
+
+                    var i1 = document.createElement('i');
+                    i1.className = "material-icons right";
+
+                    i1.textContent="more_vert";
+                    
+                    var elem7 = elem6.appendChild(i1);
+                    
+
+                    var div5 = document.createElement('div');
+                    div5.className = "card-reveal";
+
+                    var elem8 = elem2.appendChild(div5);
+
+                    var span2 = document.createElement('span');
+                    span2.className = "card-title grey-text text-darken-4";
+                    span2.style.fontSize = "20px";
+                    span2.style.textAlign = "left";
+
+                    span2.textContent=`${childData}`;
+                    
+                    var elem9 = elem8.appendChild(span2);
+
+                    var i2 = document.createElement('i');
+                    i2.className = "material-icons right";
+
+                    i2.textContent="close";
+                    
+                    var elem9 = elem9.appendChild(i2);
+
+                    var br = document.createElement('br');
+
+                    var elem9 = elem8.appendChild(br);
+
+                    var p1 = document.createElement('p');
+
+                    p1.innerHTML = "No hay informacion disponible.";
+
+                    var elem10 = elem8.appendChild(p1);
+                    
+                    var p2 = document.createElement('p');
+
+                    var elem11 = elem8.appendChild(p2);
+
+                    var a1 = document.createElement('a');
+
+                    a1.href = "https://www.amazon.com";
+                    a1.style.fontSize = "20px";
+                    a1.textContent=`${childData}`;
+
+                    var elem12 = elem11.appendChild(a1);
+                    }                    
+
+                }
+                });
+
+
+            });
+
+        }
       </script>
    </body>
 </html>

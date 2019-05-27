@@ -151,8 +151,10 @@ nav{
   margin: 5%;
 }
 
-footer {
-    bottom:0%;
+.page-footer {
+    bottom: 0;
+    width: 100%;
+    min-height: 150px;
 }
 
 .col s3 m3 l3 xl3{
@@ -194,6 +196,20 @@ footer {
 
 }
 
+.titulo-anadir-libro{
+  text-align: center;
+  font-size: 25px;
+  margin:20px;
+}
+
+#botones-libros{
+  margin: 10px;
+  position: relative;
+  right:15%;
+}
+#botones-libros button{
+  margin: 5px;
+}
 .formulario ::-moz-placeholder{
     color: grey;
 }
@@ -202,6 +218,10 @@ footer {
     color: grey;
 }
 
+.formulario p{
+  text-align: left;
+
+}
 #submit, #reset{
     position: relative;
     left: 20%;
