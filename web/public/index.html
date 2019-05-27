@@ -55,28 +55,36 @@
           $("#footer").load("footer.html");
         });
       </script>
+
+      <script>
+       function toggleFocus(el)
+       {
+        el.style.backgroundColor =  el.style.backgroundColor=="yellow" ? "inherit" : "yellow";
+       }
+      </script>
+
    </head>
    <body>
       <nav role="custom-dropdown" aria-label="Top Menu Bar">
          <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png"></img></a>
-            <input type="checkbox" id="button-dropdown">
+            <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png"></img></a>
+            <input type="checkbox" id="button-dropdown" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
             <label for="button-dropdown" onclick></label>
-            <ul class="right hide-on-med-and-down" id="barra">
-               <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false">Catálogo</a></li>
-               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" >Ver Ultimas Novedades</a></li>
-               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" >Recomendacion de libros</a></li>
-               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" >Añadir Libros</a></li>
-               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" >Sign Up</a></li>
-               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" >Log In</a></li>
-               <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" >Log Out</a></li>
+            <ul class="right hide-on-med-and-down" id="barra" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+               <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Catálogo</a></li>
+               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Añadir Libros</a></li>
+               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Sign Up</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log In</a></li>
+               <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log Out</a></li>
                <li>
                   <div class="center row">
                      <div class="col s12 ">
                         <div class="row" id="topbarsearch">
                            <div class="input-field col s6 s12 red-text">
                               <i class="white-text material-icons prefix"></i>
-                              <input type="text" aria-label="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                              <input type="text" aria-label="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                            </div>
                         </div>
                      </div>
@@ -95,23 +103,23 @@
          <div class="col s12 offset-s1 m8 offset-m1 l8 offset-l1 xl8 offset-xl1">
             <h1 class = "titulo-aventura"> Aventuras </h1>
             <div id="libros-aventura" class="centre row">
-               <ul id="libros" class="tabs tab-demo z-depth-1" role="list">
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/codigodavinci.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/codigodavinci.jpg" alt="Codigo da Vinci" role="img"></a><span>Codigo Da Vinci</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/desierto.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/desierto.jpg" alt="A traves del desierto" role="img"></a><span>A traves del Desierto</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/lobodelmar.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/lobodelmar.jpg" alt="El Lobo del mar" role="img"></a><span>El lobo del mar</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/quijote.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/quijote.jpg" alt="Don Quijote de la Mancha" role="img"></a><span>Don Quijote de la Mancha</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/isla_tesoro.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/isla_tesoro.jpg" alt="La Isla del Tesoro" role="img"></a><span>La isla del tesoro</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/prisionerozenda.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/prisionerozenda.jpg" alt="El Prisionero de Zenda" role="img"></a><span>El prisionero de Zenda</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/ronin.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/ronin.jpg" alt="Ronin" role="img"></a><span>Ronin Las Leyendas</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/caton.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/caton.jpg" alt="El Regreso del Caton" role="img"></a><span>El regreso del Caton</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/montecristo.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/montecristo.jpeg" alt="El Conde de Montecristo" role="img"></a><span>El conde de Montecristo</span></li>
-                  <li id="elemento-libro" class="tab"><a href="pagweblibro/gulliver.html" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/gulliver.jpeg" alt="Los viajes de Gulliver" role="img"></a><span>Los viajes de Gulliver</span></li>
+               <ul id="libros" class="tabs tab-demo z-depth-1" role="list" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/codigodavinci.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/codigodavinci.jpg" alt="Codigo da Vinci" role="img"></a><span>Codigo Da Vinci</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/desierto.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/desierto.jpg" alt="A traves del desierto" role="img"></a><span>A traves del Desierto</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/lobodelmar.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/lobodelmar.jpg" alt="El Lobo del mar" role="img"></a><span>El lobo del mar</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/quijote.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/quijote.jpg" alt="Don Quijote de la Mancha" role="img"></a><span>Don Quijote de la Mancha</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/isla_tesoro.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/isla_tesoro.jpg" alt="La Isla del Tesoro" role="img"></a><span>La isla del tesoro</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/prisionerozenda.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/prisionerozenda.jpg" alt="El Prisionero de Zenda" role="img"></a><span>El prisionero de Zenda</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/ronin.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/ronin.jpg" alt="Ronin" role="img"></a><span>Ronin Las Leyendas</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/caton.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/caton.jpg" alt="El Regreso del Caton" role="img"></a><span>El regreso del Caton</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/montecristo.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/montecristo.jpeg" alt="El Conde de Montecristo" role="img"></a><span>El conde de Montecristo</span></li>
+                  <li id="elemento-libro" class="tab"><a href="pagweblibro/gulliver.html" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/gulliver.jpeg" alt="Los viajes de Gulliver" role="img"></a><span>Los viajes de Gulliver</span></li>
                </ul>
             </div>
          </div>
          <div class="col s12 m3 l3 xl3">
             <h1 class="categoria"> Categorias </h1>
-            <ul id="categorias" class="collapsible" role="list">
+            <ul id="categorias" class="collapsible" role="list" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                <li>
                   <div class="collapsible-header"><i class="fab fa-fort-awesome"></i>Aventura</div>
                   <div class="collapsible-body"><span>La novela de aventuras es un género literario que narra los viajes, el misterio y el riesgo. Una característica recurrente es la acción presente hasta dominar los escenarios, básica para el desarrollo de la trama.</span></div>
@@ -139,23 +147,23 @@
          <div class="col s12 offset-s1 m8 offset-m1 l8 offset-l1 xl8 offset-xl1">
             <h1 class = "titulo-policiaca"> Policiaca </h1>
             <div id="libros-policiaca" class="centre row">
-                  <ul id="libros" class="tabs tab-demo z-depth-1" role="list">
-                     <li id="elemento-libro" class="tab"><a href="#ejem1" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/zorro.jpeg" alt="Zorro" role="img"></a><span>Zorro</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem2" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/espinas.jpeg" alt="El lenguaje de espinas" role="img"></a><span>El lenguaje de espinas</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem3" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/visitante.jpeg" alt="Visitante" role="img"></a><span>Visitante</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem4" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/border.jpeg" alt="The Border"role="img"></a><span>The Border</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem5" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/falco.jpeg" alt="Falco" role="img"></a><span>Falco</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem6" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/pitagora.jpg" alt="El Asesinato de Pitagoras" role="img"></a><span>El asesinato de Pitagoras</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/sakura.jpg" alt="Sakura" role="img"></a><span>Sakura</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/hielo.jpg" alt="Te vere bajo el hielo" role="img"></a><span>Te vere bajo el hielo</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/petirrojo.jpg" alt="Pelirrojo" role="img"></a><span>Petirrojo</span></li>
-                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false"><img class="responsive-img" src="img/paciente.jpeg" alt="El Paciente" role="img"></a><span>El paciente</span></li>
+                  <ul id="libros" class="tabs tab-demo z-depth-1" role="list" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+                     <li id="elemento-libro" class="tab"><a href="#ejem1" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/zorro.jpeg" alt="Zorro" role="img"></a><span>Zorro</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem2" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/espinas.jpeg" alt="El lenguaje de espinas" role="img"></a><span>El lenguaje de espinas</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem3" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/visitante.jpeg" alt="Visitante" role="img"></a><span>Visitante</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem4" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/border.jpeg" alt="The Border"role="img"></a><span>The Border</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem5" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/falco.jpeg" alt="Falco" role="img"></a><span>Falco</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem6" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/pitagora.jpg" alt="El Asesinato de Pitagoras" role="img"></a><span>El asesinato de Pitagoras</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/sakura.jpg" alt="Sakura" role="img"></a><span>Sakura</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/hielo.jpg" alt="Te vere bajo el hielo" role="img"></a><span>Te vere bajo el hielo</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/petirrojo.jpg" alt="Pelirrojo" role="img"></a><span>Petirrojo</span></li>
+                     <li id="elemento-libro" class="tab"><a href="#ejem7" role="listitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img class="responsive-img" src="img/paciente.jpeg" alt="El Paciente" role="img"></a><span>El paciente</span></li>
                   </ul>
             </div>
          </div>
          <div class="col s12 m3 l3 xl3">
             <h3> Calendario </h3>
-            <iframe id="miiframe" area-label="link hacia google calendar" src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Atlantic%2FCanary&amp;src=cmVhZGNsdWJ1bGxAZ21haWwuY29t&amp;src=aG9uYWU0OXM4dDh1ZWs5NGp2M20zNDI0bmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;color=%23C0CA33" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+            <iframe id="miiframe" area-label="link hacia google calendar" onfocus="toggleFocus(this)" onblur="toggleFocus(this)" src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Atlantic%2FCanary&amp;src=cmVhZGNsdWJ1bGxAZ21haWwuY29t&amp;src=aG9uYWU0OXM4dDh1ZWs5NGp2M20zNDI0bmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23039BE5&amp;color=%23C0CA33" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
          </div>
       </div>
       <div id="row-novedades" class="center row">
@@ -166,7 +174,7 @@
                   <div class="col s12 m3 l3 xl3">
                      <div id="libro-nov" class="card">
                         <div class="card-image">
-                           <img src="img/sofia.jpg" alt="Sofia" role="img"></img>
+                           <img src="img/sofia.jpg" alt="Sofia" role="img" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"></img>
                         </div>
                         <div class="card-content">
                            <p id="sinopsis" aria-labelledby="sinopsis">La anodina vida de Sofía y Daniel cambia radicalmente cuando él recibe una carta anónima en la que se le dice que Sagrario, a la que venera,
@@ -174,14 +182,14 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#">Mas detalles</a>
+                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
                   <div class="col s12 m3 l3 xl3">
                      <div class="card">
                         <div class="card-image">
-                           <img id="id-circe" src="img/circe.jpg" alt="circe" role="img"></img>
+                           <img id="id-circe" src="img/circe.jpg" alt="circe" role="img" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"></img>
                         </div>
                         <div class="card-content">
                            <p id="sinopsis" aria-labelledby="sinopsis">En el palacio de Helios, dios del sol y el más poderoso de los titanes, nace una niña. Pero Circe es una niña rara: carece de los poderes de su padre y
@@ -190,14 +198,14 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#">Mas detalles</a>
+                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
                   <div class="col s12 m3 l3 xl3">
                      <div class="card">
                         <div class="card-image">
-                           <img id="id-proposito" src="img/proposito.jpg" alt="Proposito" role="img"></img>
+                           <img id="id-proposito" src="img/proposito.jpg" alt="Proposito" role="img" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"></img>
                         </div>
                         <div class="card-content">
                            <p id="sinopsis" aria-labelledby="sinopsis">Jaime Lorente nos presenta A propósito de tu boca, un poemario que lleva escribiendo desde que iba al colegio. Un texto personal
@@ -206,14 +214,14 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#">Mas detalles</a>
+                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
                   <div class="col s12 m3 l3 xl3">
                      <div class="card">
                         <div class="card-image">
-                           <img id="id-frontera" src="img/frontera.jpg" alt="Frontera" role="img"></img>
+                           <img id="id-frontera" src="img/frontera.jpg" alt="Frontera" role="img" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"></img>
                         </div>
                         <div class="card-content">
                            <p id="sinopsis" aria-labelledby="sinopsis">La guerra ha llegado a casa.
@@ -223,7 +231,7 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#">Mas detalles</a>
+                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>

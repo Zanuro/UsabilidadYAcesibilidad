@@ -51,33 +51,42 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
       </script>
+
       <script>
         $(function(){
           $("#footer").load("footer.html");
         });
       </script>
+
+      <script>
+       function toggleFocus(el)
+       {
+        el.style.backgroundColor =  el.style.backgroundColor=="yellow" ? "inherit" : "yellow";
+       }
+      </script>
+
    </head>
    <body>
       <nav role="custom-dropdown" aria-label="Top Menu Bar">
          <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png"></img></a>
-            <input type="checkbox" id="button-dropdown">
+            <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"></img></a>
+            <input type="checkbox" id="button-dropdown" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
             <label for="button-dropdown" onclick></label>
-            <ul class="right hide-on-med-and-down" id="barra">
-               <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false" >Catálogo</a></li>
-               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" >Ver Ultimas Novedades</a></li>
-               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" >Recomendacion de libros</a></li>
-               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" >Añadir Libros</a></li>
-               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" >Sign Up</a></li>
-               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" >Log In</a></li>
-               <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" >Log Out</a></li>
+            <ul class="right hide-on-med-and-down" id="barra" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+               <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Catálogo</a></li>
+               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Añadir Libros</a></li>
+               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Sign Up</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log In</a></li>
+               <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log Out</a></li>
                <li>
                   <div class="center row">
                      <div class="col s12 ">
                         <div class="row" id="topbarsearch">
                            <div class="input-field col s6 s12 red-text">
                               <i class="white-text material-icons prefix"></i>
-                              <input type="text" aria-label="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                              <input type="text" aria-label="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                            </div>
                         </div>
                      </div>
@@ -99,7 +108,7 @@
             <div class="nav-wrapper" style="margin:20px; border:2px solid #ee6e73;border-radius:10px;box-shadow:3px 3px 3px 3px wheat;">
             <form>
             <div class="input-field">
-            <input id="search-title" type="search" onkeyup="buscar_titulo()" placeholder = "Busca algún libro por el título" required>
+            <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" id="search-title" type="search" onkeyup="buscar_titulo()" placeholder = "Busca algún libro por el título" required>
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
             </div>
@@ -110,7 +119,7 @@
             <div class="nav-wrapper" style="margin:20px; border:2px solid #ee6e73;border-radius:10px;box-shadow:3px 3px 3px 3px wheat;">
             <form>
             <div class="input-field">
-            <input id="search-author" type="search" onkeyup="buscar_autor()" placeholder = "Busca algún libro por el autor" required>
+            <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" id="search-author" type="search" onkeyup="buscar_autor()" placeholder = "Busca algún libro por el autor" required>
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
             </div>
@@ -118,12 +127,12 @@
             </div>
         </div>
         </div>
-            <ul id="lista-libros">
+            <ul id="lista-libros" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <li>
                 <div class="col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/frontera.jpg">
+                <img class="activator" class="responsive-img" src="img/frontera.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">La Frontera<i class="material-icons right">more_vert</i></span>
@@ -133,16 +142,16 @@
                 <br/>
                 <p>Hace cuarenta años que Art Keller está en primera línea de fuego del conflicto más largo de la historia de EE.UU.: la guerra contra la droga. Su obsesión por derrotar al capo más poderoso, rico y letal del mundo —el líder del cártel de Sinaloa, Adán Barrera— le ha costado cicatrices físicas y mentales, tener que despedir a personas a las que amaba e incluso se ha llevado parte de su alma.
                     Ahora Keller se encuentra al mando de la DEA viendo cómo al destruir al monstruo han surgido otros treinta que están llevando incluso más caos y destrucción a su amado México. Pero eso no es todo.</p>
-                <p><a href="https://www.amazon.es/frontera-Suspense-Thriller-Don-Winslow-ebook/dp/B07L9CTMZV" style="font-size:20px;">Amazon</a></p>
+                <p><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="https://www.amazon.es/frontera-Suspense-Thriller-Don-Winslow-ebook/dp/B07L9CTMZV" style="font-size:20px;">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/border.jpeg">
+                <img class="activator" class="responsive-img" src="img/border.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">The Border<i class="material-icons right">more_vert</i></span>
@@ -157,11 +166,11 @@
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/caton.jpg">
+                <img class="activator" class="responsive-img" src="img/caton.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:20px;">El Regreso Del Caton<i class="material-icons right">more_vert</i></span>
@@ -171,18 +180,18 @@
                 <br/>
                 <p>¿Qué pueden tener en común la Ruta de la Seda, las alcantarillas de Estambul, Marco Polo, Mongolia y Tierra Santa? Eso es lo que los protagonistas de El último Catón, Ottavia Salina y Farag Boswell, tendrán que averiguar poniendo de nuevo sus vidas en peligro para resolver un misterio que arranca en el siglo I de nuestra era. Escrita con rigor, con un ritmo que mantiene en vilo a los lectores página a página y capítulo a capítulo hasta el final, El regreso del Catón es una combinación magistral de aventura e historia con la que Matilde Asensi nos atrapa de nuevo para no dejarnos escapar hasta la última palabra
                 </p>
-                <p><a href="https://amzn.to/2HW2FGW" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2HW2FGW" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
 
 
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/circe.jpg">
+                <img class="activator" class="responsive-img" src="img/circe.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Circe<i class="material-icons right">more_vert</i></span>
@@ -192,16 +201,16 @@
                 <br/>
                 <p>En el palacio de Helios, dios del sol y el más poderoso de los titanes, nace una niña. Pero Circe es una niña rara: carece de los poderes de su padre y de la agresiva capacidad de seducción de su madre. Cuando acude al mundo de los mortales en busca de
                     compañía, descubre que sí posee un poder, el poder de la brujería, con el que puede transformar a sus rivales en monstruos y amenazar a los mismísimos dioses.</p>
-                <p><a href="https://amzn.to/2W4K45j" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2W4K45j" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/codigodavinci.jpg">
+                <img class="activator" class="responsive-img" src="img/codigodavinci.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Codigo Da Vinci<i class="material-icons right">more_vert</i></span>
@@ -211,16 +220,16 @@
                 <br/>
                 <p>Robert Langdon recibe una llamada en mitad de la noche: el conservador del museo del Louvre ha sido asesinado en extrañas circunstancias y junto a su cadáver ha aparecido un desconcertante mensaje cifrado. Al profundizar en la investigación, Langdon, experto en simbología, descubre que las pistas conducen a las obras de Leonardo Da Vinci… y que están a la vista de todos, ocultas por el ingenio del pintor.
                 </p>
-                <p><a href="https://amzn.to/2Qo5d4A" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2Qo5d4A" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/desierto.jpg">
+                <img class="activator" class="responsive-img" src="img/desierto.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:20px;">A traves del Desierto<i class="material-icons right">more_vert</i></span>
@@ -230,17 +239,17 @@
                 <br/>
                 <p>Primer título de la serie de aventuras por tierras del profeta Mahoma protagonizada por el aventurero alemán Kara Ben Nemsi (Karl, hijo de alemanes) y su fiel criado musulmán Halef Omar, en A través del desierto ambos recorren las arenas del Sáhara desde el Sur de Argelia hasta las orillas del Nilo, y desde el Mar Rojo hasta La Meca, enfrentándose a toda serie de peligros, accidentes naturales, asesinos, bandidos y piratas.
                 </p>
-                <p><a href="https://amzn.to/2Qqwm6X" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2Qqwm6X" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
 
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/espinas.jpeg">
+                <img class="activator" class="responsive-img" src="img/espinas.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:23px;">Lenguaje De Espinas<i class="material-icons right">more_vert</i></span>
@@ -249,16 +258,16 @@
                 <span class="card-title grey-text text-darken-4" style="text-align:left;font-size:21px;">Lenguaje De Espinas<i class="material-icons right">close</i></span>
                 <br/>
                 <p>Viaja a un mundo de oscuras joyas bañadas por la luz de la luna, de pueblos encantados y bosques hambrientos, de bestias parlantes y golems de pan de jengibre; un lugar donde las voces de unas jóvenes sirenas pueden provocar amenazantes tormentas y donde un río podría hacerle una suculenta oferta a un chico enamorado a cambio de un terrible precio</p>
-                <p><a href="https://amzn.to/2K72yuL" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2K72yuL" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/falco.jpeg">
+                <img class="activator" class="responsive-img" src="img/falco.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Falcó<i class="material-icons right">more_vert</i></span>
@@ -268,16 +277,16 @@
                 <br/>
                 <p>La Europa turbulenta de los años treinta y cuarenta del siglo XX es el escenario de las andanzas de Lorenzo Falcó, ex contrabandista de armas, espía sin escrúpulos, agente de los servicios de inteligencia. Durante el otoño de 1936, mientras la frontera entre amigos y enemigos se reduce a una línea imprecisa y peligrosa, Falcó recibe el encargo de infiltrarse en una difícil misión que podría cambiar el curso de la historia de España.
                 </p>
-                <p><a href="https://amzn.to/2MbHvtN" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2MbHvtN" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/gulliver.jpeg">
+                <img class="activator" class="responsive-img" src="img/gulliver.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:20px;">Gulliver's Travels<i class="material-icons right">more_vert</i></span>
@@ -287,17 +296,17 @@
                 <br/>
                 <p>Shipwrecked on the high seas, Lemuel Gulliver finds himself washed up on the strange island of Lilliput, a land inhabited by quarrelsome miniature people. On his travels he continues to meet others who force him to reflect on human behaviour - the giants of Brobdingnag, the Houyhnhnms and the Yahoos.
                 </p>
-                <p><a href="https://amzn.to/2MoB7zJ" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2MoB7zJ" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
 
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/hielo.jpg">
+                <img class="activator" class="responsive-img" src="img/hielo.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:23px;">Te vere bajo el hielo<i class="material-icons right">more_vert</i></span>
@@ -307,16 +316,16 @@
                 <br/>
                 <p>Un joven descubre el cadáver de una chica debajo de una gruesa capa de hielo en un parque del sur de Londres.
                 La inspectora jefe Erika Foster será la encargada de dirigir la investigación del caso, mientras lucha contra sus propios demonios personales. Cuando Erika comienza a indagar en el pasado de la víctima, todo parece apuntar a que su asesinato está conectado con el homicidio de otras tres mujeres que han sido encontradas también bajo las aguas heladas de otros lagos en Londres.</p>
-                <p><a href="https://amzn.to/2JI7neD" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2JI7neD" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/isla_tesoro.jpg">
+                <img class="activator" class="responsive-img" src="img/isla_tesoro.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">La isla del tesoro<i class="material-icons right">more_vert</i></span>
@@ -325,16 +334,16 @@
                 <span class="card-title grey-text text-darken-4" style="text-align:left;">La isla del tesoro<i class="material-icons right">close</i></span>
                 <br/>
                 <p>El protagonista de este magnífico libro es un niño, Jim Hawkins. Su emocionante aventura comienza el día en que un viejo marinero con la cara marcada por un sablazo llega a la posada de su padre. El cofre que transporta el desconocido contiene un extraño mapa, que Jim descubrirá por casualidad. A partir de este momento, nuestro joven protagonista emprenderá un arriesgado viaje en busca del tesoro del temido capitán Flint.</p>
-                <p><a href="https://amzn.to/2W3J2ql" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2W3J2ql" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/lobodelmar.jpg">
+                <img class="activator" class="responsive-img" src="img/lobodelmar.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:20px;">El lobo de mar<i class="material-icons right">more_vert</i></span>
@@ -343,17 +352,17 @@
                 <span class="card-title grey-text text-darken-4" style="font-size:20px;text-align:left;">El lobo de mar<i class="material-icons right">close</i></span>
                 <br/>
                 <p>Novela de aventuras ambientada en la vida marinera y de los cazadores de focas, EL LOBO DE MAR (1904) -inspirada, como gran parte de la obra de Jack London (1876-1916), en experiencias propias y personajes por él conocidos- gira en buena medida en torno al capitán Larsen, símbolo del superhombre, de la fuerza y la resistencia físicas, en cuya personalidad contradictoria coexisten la violencia y el primitivismo con la mentalidad propia de un hombre refinado sensible a la poesía y a la filosofía.</p>
-                <p><a href="https://amzn.to/2EBc9Xc" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2EBc9Xc" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
 
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/montecristo.jpeg">
+                <img class="activator" class="responsive-img" src="img/montecristo.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:19px;">El conde de Montecristo<i class="material-icons right">more_vert</i></span>
@@ -362,17 +371,17 @@
                 <span class="card-title grey-text text-darken-4" style="text-align:left;font-size:17px;">El conde de Montecristo<i class="material-icons right">close</i></span>
                 <br/>
                 <p>Edmundo Dantés, un joven marinero, honrado y cándido, que lleva una existencia tranquila, solo desea casarse con la hermosa Mercedes. Pero su vida se verá arruinada cuando su mejor amigo, Fernando, deseoso de conquistar a su prometida, le traicione vilmente. Condenado a cumplir una condena injusta en la siniestra prisión del castillo de If, Edmundo vivirá una larga pesadilla de trece años. Obsesionado por su inesperado destino, dejará de lado sus convicciones para urdir la venganza perfecta.</p>
-                <p><a href="https://amzn.to/2MafrXE" style="font-size:20px;">Amazon</a></p>
-                <p><a href="https://www.gutenberg.org/ebooks/1184" style="font-size:20px;">Leer Libro!</a></p>
+                <p><a href="https://amzn.to/2MafrXE" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
+                <p><a href="https://www.gutenberg.org/ebooks/1184" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Leer Libro!</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/paciente.jpeg">
+                <img class="activator" class="responsive-img" src="img/paciente.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">El Paciente<i class="material-icons right">more_vert</i></span>
@@ -381,16 +390,16 @@
                 <span class="card-title grey-text text-darken-4" style="text-align:left;">El Paciente<i class="material-icons right">close</i></span>
                 <br/>
                 <p>El prestigioso neurocirujano David Evans se enfrenta a una terrible encrucijada: si su próximo paciente sale vivo de la mesa de operaciones, su pequeña hija Julia morirá a manos de un psicópata. Para el Dr. Evans se inicia una desesperada cuenta atrás cuando descubre que el paciente que debe morir para que su hija viva no es otro que el presidente de Estados Unidos.</p>
-                <p><a href="https://amzn.to/2JEKB7C" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2JEKB7C" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/petirrojo.jpg">
+                <img class="activator" class="responsive-img" src="img/petirrojo.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:20px;">Petirrojo<i class="material-icons right">more_vert</i></span>
@@ -399,17 +408,17 @@
                 <span class="card-title grey-text text-darken-4" style="font-size:20px;text-align:left;">Petirrojo<i class="material-icons right">close</i></span>
                 <br/>
                 <p>Año 2000. En Oslo aparece en plena calle el cadáver degollado de un viejo militante nazi. Harry Hole, que tras cometer un grave error ha sido reasignado a los servicios secretos, percibe los puntos en común entre este crimen y el contenido de un informe de los muchos documentos aburridos que pasan por sus manos a diario: alguien compró un rifle Märklin, un arma extremadamente cara y precisa usada por grupos neonazis.</p>
-                <p><a href="https://amzn.to/2HEgpY7" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2HEgpY7" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
 
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m2 l2 offset-l2 xl2 offset-xl2">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/pitagora.jpg">
+                <img class="activator" class="responsive-img" src="img/pitagora.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:17px;">El Asesinato de Pitagoras<i class="material-icons right">more_vert</i></span>
@@ -418,16 +427,16 @@
                 <span class="card-title grey-text text-darken-4" style="text-align:left;font-size:17px;">El Asesinato de Pitagoras<i class="material-icons right">close</i></span>
                 <br/>
                 <p>El anciano filósofo Pitágoras, uno de los personajes con más poder de su época, está a punto de elegir un sucesor entre los grandes maestros cuando en su comunidad se inicia una serie de asesinatos. Tras los crímenes se atisba una mente oscura y poderosa que parece superar al mismísimo Pitágoras. La enigmática Ariadna y el investigador egipcio Akenón tratarán de descubrir quién es el asesino a la vez que resuelven sus propios sentimientos.</p>
-                <p><a href="https://amzn.to/2HSHaXC" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2HSHaXC" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/quijote.jpg">
+                <img class="activator" class="responsive-img" src="img/quijote.jpg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:16px;text-align:left;">Don Quijote De La Mancha<i class="material-icons right">more_vert</i></span>
@@ -436,16 +445,16 @@
                 <span class="card-title grey-text text-darken-4" style="font-size:16px;text-align:left;">Don Quijote De La Mancha<i class="material-icons right">close</i></span>
                 <br/>
                 <p>¿Es una locura dejarse llevar por el sentimiento? Esto es lo que hizo don Quijote: guiado por el amor, se puso el disfraz de salvador de los débiles y, armado con su lanza y sus ideales, entró en batalla contra el mal. Si esto es estar loco, que se llene el mundo de Quijotes. La presente adaptación del Quijote, dirigida al público infantil, recoge los episodios más representativos de la obra, que han sido reescritos de una forma clara y sencilla, pero respetando en todo momento el estilo del texto universal de Cervantes.</p>
-                <p><a href="https://amzn.to/2VNibtP" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2VNibtP" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>
                 </li>
-                <li>
-                <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1">
+                <li onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+                <div class="col s8 offset-s2 m2 offset-m1 l2 offset-l1 xl2 offset-xl1" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" class="responsive-img" src="img/zorro.jpeg">
+                <img class="activator" class="responsive-img" src="img/zorro.jpeg" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                 </div>
                 <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4" style="font-size:20px;">Zorro<i class="material-icons right">more_vert</i></span>
@@ -454,7 +463,7 @@
                 <span class="card-title grey-text text-darken-4" style="font-size:20px;text-align:left;">Zorro<i class="material-icons right">close</i></span>
                 <br/>
                 <p>¿Y si el arma más peligrosa del mundo no fuera un misil inteligente, un submarino sigiloso o un virus informático? ¿Y si, en realidad, se tratara de un chico de diecisiete años con una mente prodigiosa, capaz de sortear los sistemas de seguridad más sofisticados y de manipular cualquier arma y volverla en contra de los más poderosos? ¿Qué no estaría dispuesta a hacer cualquier agencia de inteligencia para tenerlo de su lado?</p>
-                <p><a href="https://amzn.to/2wjehOS" style="font-size:20px;">Amazon</a></p>
+                <p><a href="https://amzn.to/2wjehOS" style="font-size:20px;" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Amazon</a></p>
                 </div>
                 </div>
                 </div>

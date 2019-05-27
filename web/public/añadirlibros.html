@@ -38,30 +38,40 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
       </script>
+
       <script>
           $(function(){
           $("#footer").load("footer.html");
         });
       </script>
+
+
+      <script>
+        function toggleFocus(el)
+        {
+          el.style.backgroundColor =  el.style.backgroundColor=="yellow" ? "inherit" : "yellow";
+        }
+      </script>
+
       </head>
     <body>
       <nav aria-label="Top Menu Bar">
          <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png" role="banner" tabindex="0"></img></a>
-            <ul class="right hide-on-med-and-down" id="barra" role="menubar" aria-label = "Menu bar">
-               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false">Ver Ultimas Novedades </a></li>
-               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false">Recomendacion de libros</a></li>
-               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false">Añadir Libros</a></li>
-               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false">Login</a></li>
-               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false">Registrarse</a></li>
-               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false">Log Out</a></li>
+            <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png" role="banner" tabindex="0" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"></img></a>
+            <ul class="right hide-on-med-and-down" id="barra" role="menubar" aria-label = "Menu bar" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Ver Ultimas Novedades </a></li>
+               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Añadir Libros</a></li>
+               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Login</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Registrarse</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log Out</a></li>
                <li role="none">
                   <div class="center row">
                      <div class="col s12 ">
                         <div class="row" id="topbarsearch">
                            <div class="input-field col s6 s12 red-text">
                               <i class="white-text material-icons prefix"></i>
-                              <input role="search" aria-label="Search Bar" type="text" aria-placeholder="search" id="autocomplete-input" class="autocomplete white-text">
+                              <input role="search" aria-label="Search Bar" type="text" aria-placeholder="search" id="autocomplete-input" class="autocomplete white-text" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                            </div>
                         </div>
                      </div>
@@ -74,22 +84,22 @@
             <div class="cols8 offset-s3 m8 offset-m3 l8 offset-l3 xl4 offset-xl3">
                 <form class="formulario" aria-label="Formulario añadir libros" method="post" onsubmit="return false">
 
-                    <p>* Titulo: <input type="text" aria-placeholder="El señor de los Anillos" id="libro" aria-required="true" aria-describedby="alerta-title" aria-live="assertive" aria-label="Titulo libro"/></p>
+                    <p>* Titulo: <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" type="text" aria-placeholder="El señor de los Anillos" id="libro" aria-required="true" aria-describedby="alerta-title" aria-live="assertive" aria-label="Titulo libro"/></p>
                     <span id="alerta-title" role="tooltip" aria-live="assertive"> </span>
-                    <p>* Autor: <input type="text" aria-placeholder="J.R.Tolkien" id="nombre" aria-required="true" aria-describedby="alerta-autor" aria-live="assertive" aria-label="Autor libro"/></p>
+                    <p>* Autor: <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" type="text" aria-placeholder="J.R.Tolkien" id="nombre" aria-required="true" aria-describedby="alerta-autor" aria-live="assertive" aria-label="Autor libro"/></p>
                     <span id="alerta-autor" role="tooltip" aria-live="assertive"> </span>
-                    <p>Año: <input type="number" aria-placeholder="1992" id="agnos" aria-describedby="alerta-agno" aria-live="assertive" aria-label="Año libro"></p>
+                    <p>Año: <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" type="number" aria-placeholder="1992" id="agnos" aria-describedby="alerta-agno" aria-live="assertive" aria-label="Año libro"></p>
                     <span id="alerta-agno" role="tooltip" aria-live="assertive"> </span>
-                    <p>* Genero: <input type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" aria-placeholder="Aventuras" id="genero" aria-required="true" aria-describedby="alerta-genero" aria-live="assertive" aria-label="Genero libro"/></p>
+                    <p>* Genero: <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" type="text" title="Aventuras,Comedia,Ficcion,Historica" pattern=".{7,10}" aria-placeholder="Aventuras" id="genero" aria-required="true" aria-describedby="alerta-genero" aria-live="assertive" aria-label="Genero libro"/></p>
                     <span id="alerta-genero" role="tooltip" aria-live="assertive"> </span>
-                    <p>ISBN: <input type="number" id="isbn" aria-placeholder="1578347859023" minlength="13" maxlength="13" aria-describedby="alerta-isbn" aria-live="assertive" aria-label="ISBN libro"></p>
+                    <p>ISBN: <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" type="number" id="isbn" aria-placeholder="1578347859023" minlength="13" maxlength="13" aria-describedby="alerta-isbn" aria-live="assertive" aria-label="ISBN libro"></p>
                     <span id="alerta-isbn" role="tooltip"aria-live="assertive"> </span>
                     <span id="libro-added"> </span>
                     <p>
-                        <button aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar" alt="Boton Submit">Submit
-                        <i class="material-icons right">send</i>
+                        <button onfocus="toggleFocus(this)" onblur="toggleFocus(this)" aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="submit" id="submit" value="Enviar" alt="Boton Submit">Submit
+                          <i class="material-icons right">send</i>
                         </button>
-                        <button aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar" alt="Boton Reset">Reset
+                        <button onfocus="toggleFocus(this)" onblur="toggleFocus(this)" aria-pressed="false" tabindex="0" class="btn waves-effect waves-light" type="reset" id="reset" value="Borrar" alt="Boton Reset">Reset
                         <i class="material-icons right">delete</i>
                         </button>
                     </p>
