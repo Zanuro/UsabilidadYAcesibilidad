@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="style/style.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <!-- Global site tag (gtag.js) - Google Analytics --> 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131489316-3"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -31,6 +31,18 @@
             };
             firebase.initializeApp(config);
         </script>
+
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous">
+        </script>
+        <script>
+          $(function(){
+            $("#footer").load("footer.html");
+          });
+        </script>
+
     </head>
     <body>
         <nav>
@@ -75,43 +87,7 @@
       <script src="javascript/auth.js"></script>
       <script src="javascript/func.js"></script>
     </body>
-    <footer class="page-footer">
-            <div class="container">
-                    <div class="center row">
-                       <div class="col l4 s12">
-                          <h5 class="white-text">Quienes somos</h5>
-                          <p class="grey-text text-lighten-4">
-                             Somos una biblioteca digital donde podrás encontar una amplia variedad de libros, comentarlos con el resto de usuarios, apuntar eventos...
-                          </p>
-                       </div>
-                       <div class="col l4 offset-l1 s12">
-                          <h5 class="white-text">Ubicación</h5>
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3506.8985774735934!2d-16.322677222337415!3d28.48260090236116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m1!1m0!5e0!3m2!1ses!2ses!4v1553097652506" frameborder="0" style="border:0" allowfullscreen></iframe>
-                          <p><i class="fas fa-map-marker-alt"></i>Camino San Francisco de Paula</p>
-                       </div>
-                       <div class="col l2 offset-l1 s12">
-                          <h5 class="white-text">Contactanos</h5>
-                          <ul>
-                             <li><a class="grey-text text-lighten-3" href="#!">
-                                <i class="fab fa-twitter"></i>
-                                Twitter</a>
-                             </li>
-                             <li><a class="grey-text text-lighten-3" href="#!">
-                                <i class="fab fa-instagram"></i>
-                                Instagram</a>
-                             </li>
-                             <li><a class="grey-text text-lighten-3" href="#!">
-                                <i class="fab fa-facebook"></i>Facebook</a>
-                             </li>
-                          </ul>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="footer-copyright">
-                    <div class="container">
-                       © 2019 Copyright Text
-                    </div>
-                 </div>
-    </footer>
+
+    <div id="footer"></div>
 
 </html>

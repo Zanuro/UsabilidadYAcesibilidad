@@ -44,6 +44,17 @@
 
       gtag('config', 'UA-131489316-3', { 'optimize_id': 'GTM-PKTQHB3'});
       </script>
+
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+      </script>
+      <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+      </script>
    </head>
    <body>
       <nav role="custom-dropdown" aria-label="Top Menu Bar">
@@ -235,53 +246,9 @@
          </div>
       </div>
       </div>
-      <footer class="page-footer">
-         <div class="container">
-            <div class="center row">
-               <div class="col l4 s12">
-                  <h5 class="white-text">Quienes somos</h5>
-                  <p id="descripcion" class="grey-text text-lighten-4">
-                     Somos una biblioteca digital donde podrás encontar una amplia variedad de libros, comentarlos con el resto de usuarios, apuntar eventos...
-                  </p>
-               </div>
-               <div class="col m4 xl4 l4 offset-l1 s12">
-                  <h5 class="white-text">Ubicación</h5>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3506.8985774735934!2d-16.322677222337415!3d28.48260090236116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m1!1m0!5e0!3m2!1ses!2ses!4v1553097652506" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  <p id="direccion"><i class="fas fa-map-marker-alt"></i>Camino San Francisco de Paula</p>
-               </div>
-               <div class="col l2 offset-l1 s12">
-                  <h5 class="white-text">Contactanos</h5>
-                  <ul>
-                     <li><a class="grey-text text-lighten-3" href="https://twitter.com/ElclubdelaLect1">
-                        <i class="fab fa-twitter"></i>
-                        Twitter</a>
-                     </li>
-                     <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/readclubull/">
-                        <i class="fab fa-instagram"></i>
-                        Instagram</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="col l2 offset-l1 s12">
-                  <h5 class="white-text">Mapa web</h5>
-                  <p id="descripcion" class="grey-text text-lighten-4">
-                    <ul>
-                      <li><a href="index.html">Inicio</a></li>
-                      <li><a href="añadirlibros.html">Añadir libros</a></li>
-                      <li><a href="catalogo.html">Catálogo</a></li>
-                      <li><a href="login.html">Login</a></li>
-                      <li><a href="signup.html">Signup</a></li>
-                    </ul>
-                  </p>
-               </div>
-            </div>
-         </div>
-         <div class="footer-copyright">
-            <div class="container">
-               © 2019 Copyright Text
-            </div>
-         </div>
-      </footer>
+
+      <div id="footer"></div>
+
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script type='text/javascript' src="javascript/func.js"></script>
