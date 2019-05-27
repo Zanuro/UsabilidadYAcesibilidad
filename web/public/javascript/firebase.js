@@ -5,6 +5,12 @@ var myDatabase = firebase.database();
 var bool_genero=false;
 var bool_title=false,bool_autor=false,bool_agno=false,bool_isbn=false,bool_imagen=false;
 var img_src;
+var myObj ={ "autor0":"Don Winslow", "autor1": "Don Winslow", "autor2":"Matilde Asensi","autor3":"Madelaine Miller",
+"autor4":"Dan Brown", "autor5": "Karl May", "autor6":"Leigh Bardugo","autor7":"Arturo Perez Reverte",
+"autor8":"Jonathan Swift", "autor9": "Robert Bryndza", "autor10":"Robert Louis Stevenson","autor11":"Jack London",
+"autor12":"Alexandre Dumas", "autor13": "Juan Gomez Jurado", "autor14":"Jo Nesbo","autor15":"Marcos Chicot",
+"autor16":"Miguel de Cervantes", "autor17": "Frederick Forsyth"
+};
 
   document.getElementById("submit").addEventListener('click',function(e){
     
@@ -170,7 +176,7 @@ function buscar_titulo() {
 
   function buscar_autor() {
 
-    get_put_authors();
+    get_put_authors("");
     var input, filter, ul, li, a, i, txtValue,nombre;
     input = document.getElementById('search-author');
     filter = input.value.toUpperCase();
@@ -197,19 +203,14 @@ function buscar_titulo() {
   function get_put_authors(input){
 
     if(input === ""){
-
-      return myObj = { "autor0":"Don Wislow", "autor1": "Don Wislow", "autor2":"Matilde Asensi","autor3":"Madelaine Miller",
-      "autor4":"Dan Brown", "autor5": "Karl May", "autor6":"Leigh Bardugo","autor7":"Arturo Perez Reverte",
-      "autor8":"Jonathan Swift", "autor9": "Robert Bryndza", "autor10":"Robert Louis Stevenson","autor11":"Jack London",
-      "autor12":"Alexandre Dumas", "autor13": "Juan Gomez Jurado", "autor14":"Jo Nesbo","autor15":"Marcos Chicot",
-      "autor16":"Miguel de Cervantes", "autor17": "Frederick Forsyth"
-      };
+        
+        return myObj;
+      
     }
     else {
       var count = Object.keys(myObj).length;
-      var key = "autor" + count;
-      myObj[key] = input;
-      return myObj;
+      var prop = "autor" + count;
+      myObj[prop] = input;
     }
   }
   

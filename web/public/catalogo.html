@@ -482,6 +482,8 @@
              add_libros_to_list();
           };
 
+
+
           function add_libros_to_list(){
 
                 var  ul, li, a, i,txtValue;
@@ -507,11 +509,12 @@
                 var elems = li.length;
 
                 if (lista.includes(childData) == false){
-
+                    
+                    get_put_authors("");
+                    get_put_authors(childSnapshot.node_.children_.root_.left.value.value_);
                     
                     if(childSnapshot.val().imagen == null ){
                         var src = "https://bit.ly/2I05h6Q";
-                        console.log("aaaa");
                     }
                     else{
                         var src = childSnapshot.val().imagen;
@@ -809,6 +812,7 @@
             });
 
         }
+
       </script>
    </body>
 </html>
