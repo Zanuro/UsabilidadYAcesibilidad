@@ -2,6 +2,14 @@
 
 var myDatabase = firebase.database();
 
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
+
 var bool_genero=false;
 var bool_title=false,bool_autor=false,bool_agno=false,bool_isbn=false,bool_imagen=false;
 var img_src;

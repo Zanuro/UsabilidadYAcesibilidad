@@ -53,31 +53,55 @@
 
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
-               <a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="index.html" class="brand-logo"><img id="logo-pag" src="img/logo-b.png"></img></a>
-               <ul class="right hide-on-med-and-down" id="barra">
-                  <li><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="novedades.html">Ver Ultimas Novedades</a></li>
-                  <li><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="recomendacion.html">Recomendacion de libros</a></li>
-                  <li><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="añadirlibros.html">Añadir Libros</a></li>
-                  <li><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="login.html">Log In</a></li>
-                  <li><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="signup.html">Sign Up</a></li>
-                  <li><a onfocus="toggleFocus(this)" onblur="toggleFocus(this)" href="signup.html">Log Out</a></li>
-                  <li>
-                     <div class="center row">
-                        <div class="col s12 ">
-                           <div class="row" id="topbarsearch">
-                              <div class="input-field col s6 s12 red-text">
-                                 <i class="white-text material-icons prefix"></i>
-                                 <input onfocus="toggleFocus(this)" onblur="toggleFocus(this)" type="text" aria-labelledby="buscar" placeholder="search" id="autocomplete-input" class="autocomplete white-text">
-                              </div>
+        <nav role="custom-dropdown" aria-label="Top Menu Bar">
+         <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png"></img></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down" id="barra" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+               <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Catálogo</a></li>
+               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Añadir Libros</a></li>
+               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Sign Up</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log In</a></li>
+               <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log Out</a></li>
+               <li>
+                  <div class="center row">
+                     <div class="col s12 ">
+                        <div class="row" id="topbarsearch">
+                           <div class="input-field col s6 s12 red-text">
+                              <i class="white-text material-icons prefix"></i>
+                              <input type="text" aria-label="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                            </div>
                         </div>
                      </div>
-                  </li>
-                  </ul>
-            </div>
-         </nav>
+                  </div>
+               </li>
+               </ul>
+         </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+               <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Catálogo</a></li>
+               <li><a href="novedades.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Ver Ultimas Novedades</a></li>
+               <li><a href="recomendacion.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Recomendacion de libros</a></li>
+               <li><a href="añadirlibros.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Añadir Libros</a></li>
+               <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Sign Up</a></li>
+               <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log In</a></li>
+               <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log Out</a></li>
+               <li>
+                  <div class="center row">
+                     <div class="col s12 ">
+                        <div class="row" id="topbarsearch">
+                           <div class="input-field col s6 s12 red-text">
+                              <i class="white-text material-icons prefix"></i>
+                              <input type="text" aria-label="barra de navegacion" placeholder="search" id="autocomplete-input" class="autocomplete white-text" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               </ul> 
         <div class="row">
             <div class="col s8 offset-s3 m8 offset-m3 l8 offset-l3 xl4 offset-xl3">
                 <div href="index.html" method="POST">
@@ -94,6 +118,7 @@
       <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="javascript/auth.js"></script>
       <script src="javascript/func.js"></script>
+      <script type='text/javascript' src="javascript/firebase.js"></script>
     </body>
 
     <div id="footer"></div>
