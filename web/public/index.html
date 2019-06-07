@@ -51,12 +51,6 @@
         crossorigin="anonymous">
       </script>
       <script>
-        $(function(){
-          $("#footer").load("footer.html");
-        });
-      </script>
-
-      <script>
        function toggleFocus(el)
        {
         el.style.backgroundColor =  el.style.backgroundColor=="yellow" ? "inherit" : "yellow";
@@ -204,7 +198,7 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
+                           <a href="https://amzn.to/2WTX9hy" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
@@ -220,7 +214,7 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
+                           <a href="https://amzn.to/2IvEGP1" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
@@ -236,7 +230,7 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
+                           <a href="https://amzn.to/2QY2xL9" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
@@ -253,24 +247,11 @@
                            </p>
                         </div>
                         <div class="card-action">
-                           <a href="#" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
+                           <a href="https://amzn.to/2XtqdcO" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Mas detalles</a>
                         </div>
                      </div>
                   </div>
 
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="bx-wrapper">
-         <div class="bx-viewport">
-            <div class="slider" style="transition-duration : 0s; transform: translate3d(-800px,0px,0px);">
-               <div class="slide-o" style="float: left; list-style:none; margin: auto;">
-                  <div class="libro-novedad">
-                     <figure>
-                        <img class="portada" src="https://www.planetadelibros.com/usuaris/libros/fotos/221/m_libros/portada_el-codigo-da-vinci-nueva-edicion_dan-brown_201607291100.jpg" alt="codigo da vinci"/>
-                     </figure>
-                  </div>
                </div>
             </div>
          </div>
@@ -286,6 +267,11 @@
       <script>
           const Calender = document.querySelector('.datepicker');
           M.Datepicker.init(Calender,{});
+      </script>
+      <script>
+        $(document).ready(function() {  
+         $("#footer").load("footer.html");
+         });
       </script>
    </body>
 </html>
