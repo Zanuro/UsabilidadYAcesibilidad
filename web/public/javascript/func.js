@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 //window.alert('otro');
 
-
 firebase.auth().onAuthStateChanged(function(user) {
 	if (user) {
 		console.log("User is signed in.");
@@ -35,7 +34,7 @@ var logou = document.getElementById("logout");
 
 logou.addEventListener("click", function (event) {
 	firebase.auth().signOut().then(function() {
-		window.alert("el usuario ha cerrado sesión");
+		window.alert("El usuario ha cerrado sesión");
 		window.location="index.html";
 	}).catch(function(error) {
 		console.log(error);

@@ -2,7 +2,6 @@
 
 var myDatabase = firebase.database();
 
-
 $(document).ready(function(){
   $('.sidenav').sidenav();
 });

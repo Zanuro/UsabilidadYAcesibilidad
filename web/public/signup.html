@@ -12,30 +12,26 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131489316-3"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
 
-          gtag('config', 'UA-131489316-3');
+           gtag('config', 'UA-131489316-3');
         </script>
-        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-database.js"></script>
         <script>
-            var config = {
-                apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
-                authDomain: "webua1819.firebaseapp.com",
-                databaseURL: "https://webua1819.firebaseio.com",
-                projectId: "webua1819",
-                storageBucket: "webua1819.appspot.com",
-                messagingSenderId: "28657746169"
-            };
-            firebase.initializeApp(config);
-        </script>
-
-        <script
-          src="https://code.jquery.com/jquery-3.3.1.js"
-          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-          crossorigin="anonymous">
+                var config = {
+                    apiKey: "AIzaSyCGk645y7ZSl-e1sUHio8DRiN4ytvkMXnU",
+                    authDomain: "webua1819.firebaseapp.com",
+                    databaseURL: "https://webua1819.firebaseio.com",
+                    projectId: "webua1819",
+                    storageBucket: "webua1819.appspot.com",
+                    messagingSenderId: "28657746169"
+                };
+                firebase.initializeApp(config);
         </script>
 
         <script>
@@ -47,7 +43,7 @@
 
     </head>
     <body>
-        <nav role="custom-dropdown" aria-label="Top Menu Bar">
+      <nav role="custom-dropdown" aria-label="Top Menu Bar">
          <div class="nav-wrapper">
             <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png"></img></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -119,16 +115,16 @@
 
       <div id="footer"></div>
 
-      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script type='text/javascript' src="javascript/firebase.js"></script>
-      <script src="javascript/auth.js"></script>
-      <script src="javascript/func.js"></script>
-      <script>
+        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type='text/javascript' src="javascript/func.js"></script>
+        <script type='text/javascript' src="javascript/firebase.js"></script>
+        <script type='text/javascript' src="javascript/auth.js"></script>
+        <script>
         $(document).ready(function() {  
          $("#footer").load("footer.html");
          });
-      </script>
+         </script>
     </body>
 
 </html>
