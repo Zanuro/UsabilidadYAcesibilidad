@@ -27,10 +27,11 @@ nav{
  }
  h1{
     text-align: center;
-    font-size:300%;
+    font-size:350%;
     color:#FE3C00;
     position: relative;
     top: -5.1%;
+    font-family: 'Merriweather', serif;
  }
 
  body {
@@ -88,17 +89,6 @@ nav{
    width: 60%;
  }
 
-.carousel .carousel-item{
-    visibility: visible;
-    width: 10%;
-    height: 10%;
-
-}
-
-.carousel-item img{
-    width:100%;
-    height:100%;
-}
 
 .tabs img{
     width:30%;
@@ -132,10 +122,6 @@ nav{
     font-family: "Sans Serif";
 }
 
-.carousel.carousel-slider{
-    top:0;
-    left:0;
-}
 
 .carousel {
     overflow: hidden;
@@ -206,7 +192,23 @@ nav{
   font-size: 25px;
   margin:20px;
 }
+.carousel-item img{
+  height: 400px;
+  width: auto;
 
+}
+#recomandados-novela-negra{
+  background-image: url("https://bit.ly/2QYBTSh");
+  overflow: hidden;
+}
+
+#novedades-libros{
+  background-image: url("https://static5planetadelibroscom.cdnstatics.com/usuaris/web_canales_tematicos/fotos/1/fondo/132_2_fondo_recomendados.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+}
 #botones-libros{
   margin: 10px;
   position: relative;

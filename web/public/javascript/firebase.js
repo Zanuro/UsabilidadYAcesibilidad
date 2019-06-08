@@ -10,6 +10,11 @@ $(document).ready(function(){
   $('.collapsible').collapsible();
 });
 
+$(document).ready(function(){
+  // este es el script del slider
+  $('.carousel').carousel();
+});
+
 
 var bool_genero=false;
 var bool_title=false,bool_autor=false,bool_agno=false,bool_isbn=false,bool_imagen=false;
