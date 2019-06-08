@@ -165,17 +165,19 @@ nav{
 }
 
 #id-circe{
-    height:34%;
+    height:80%;
 }
 
 #id-proposito{
-    height:38.5%;
+    height:80%;
 }
 
 #id-frontera{
-    height:34%;
+    height:80%;
 }
-
+#id-sofia{
+  height:80%;
+}
 
 .brand-logo{
     width: 30%;
@@ -284,6 +286,9 @@ nav{
   }
   .lugar{
     font-size:15px;
+  }
+  .titulo-login-libro{
+    text-align: center;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
