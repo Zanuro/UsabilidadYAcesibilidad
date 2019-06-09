@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
    <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
    <body>
       <nav role="custom-dropdown" aria-label="Top Menu Bar">
          <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png"></img></a>
+            <a href="index.html" class="brand-logo" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"><img id="logo-pag" src="img/logo-b.png" alt="logo club de lectura"></img></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down" id="barra" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">
                <li><a href="catalogo.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Catálogo</a></li>
@@ -101,7 +101,7 @@
                <li><a href="login.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Sign Up</a></li>
                <li><a href="signup.html" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log In</a></li>
                <li><a href="#!" id="logout" role="menuitem" tabindex="0" aria-expanded="false" onfocus="toggleFocus(this)" onblur="toggleFocus(this)">Log Out</a></li>
-               </ul>      
+               </ul>
       <div id="background" class="center row" role="header">
          <div class="col s12 m12 l12 xl12">
             <h1 class="titulo" aria-label="titulo">Club De Lectura</h1>
@@ -508,7 +508,7 @@
                 var librosRef = myDatabase.ref('libros');
                 var refDB = myDatabase.ref().child('libros');
                 refDB.on('value', function(snapshot) {
-                
+
                 snapshot.forEach(function(childSnapshot) {
                 var childData = childSnapshot.key;
                 ul = document.getElementById("lista-libros");
@@ -516,17 +516,17 @@
                 var elems = li.length;
 
                 if (lista.includes(childData) == false){
-                    
+
                     get_put_authors("");
                     get_put_authors(childSnapshot.node_.children_.root_.left.value.value_);
-                    
+
                     if(childSnapshot.val().imagen == null ){
                         var src = "https://bit.ly/2I05h6Q";
                     }
                     else{
                         var src = childSnapshot.val().imagen;
                     }
-                        
+
                     if(elems % 3 == 0){
                         //anadir primero
 
@@ -534,20 +534,20 @@
 
                     var li = document.createElement("li");
                     root.appendChild(li);
-                    
+
                     var div1 = document.createElement('div');
                     div1.className = "col s8 offset-s2 m3 offset-m2 l3 offset-l2 xl2 offset-xl2";
-                    
+
                     var elem1 = li.appendChild(div1);
 
                     var div2 = document.createElement('div');
                     div2.className = "card";
 
                     var elem2 = elem1.appendChild(div2);
-                    
+
                     var div3 = document.createElement('div');
                     div3.className = "card-image waves-effect waves-block waves-light";
-                    
+
                     var elem3 = elem2.appendChild(div3);
 
                     var img1 = document.createElement('img');
@@ -567,16 +567,16 @@
                     span1.style.fontSize = "130%";
 
                     span1.textContent=`${childData}`;
-                    
+
                     var elem6 = elem5.appendChild(span1);
 
                     var i1 = document.createElement('i');
                     i1.className = "material-icons right";
 
                     i1.textContent="more_vert";
-                    
+
                     var elem7 = elem6.appendChild(i1);
-                    
+
 
                     var div5 = document.createElement('div');
                     div5.className = "card-reveal";
@@ -589,14 +589,14 @@
                     span2.style.textAlign = "left";
 
                     span2.textContent=`${childData}`;
-                    
+
                     var elem9 = elem8.appendChild(span2);
 
                     var i2 = document.createElement('i');
                     i2.className = "material-icons right";
 
                     i2.textContent="close";
-                    
+
                     var elem9 = elem9.appendChild(i2);
 
                     var br = document.createElement('br');
@@ -608,7 +608,7 @@
                     p1.innerHTML = "No hay informacion disponible.";
 
                     var elem10 = elem8.appendChild(p1);
-                    
+
                     var p2 = document.createElement('p');
 
                     var elem11 = elem8.appendChild(p2);
@@ -630,20 +630,20 @@
 
                     var li = document.createElement("li");
                     root.appendChild(li);
-                    
+
                     var div1 = document.createElement('div');
                     div1.className = "col s8 offset-s2 m3 offset-m2 l3 offset-l2 xl2 offset-xl1";
-                    
+
                     var elem1 = li.appendChild(div1);
 
                     var div2 = document.createElement('div');
                     div2.className = "card";
 
                     var elem2 = elem1.appendChild(div2);
-                    
+
                     var div3 = document.createElement('div');
                     div3.className = "card-image waves-effect waves-block waves-light";
-                    
+
                     var elem3 = elem2.appendChild(div3);
 
                     var img1 = document.createElement('img');
@@ -662,16 +662,16 @@
                     span1.style.fontSize = "130%";
 
                     span1.textContent=`${childData}`;
-                    
+
                     var elem6 = elem5.appendChild(span1);
 
                     var i1 = document.createElement('i');
                     i1.className = "material-icons right";
 
                     i1.textContent="more_vert";
-                    
+
                     var elem7 = elem6.appendChild(i1);
-                    
+
 
                     var div5 = document.createElement('div');
                     div5.className = "card-reveal";
@@ -684,14 +684,14 @@
                     span2.style.textAlign = "left";
 
                     span2.textContent=`${childData}`;
-                    
+
                     var elem9 = elem8.appendChild(span2);
 
                     var i2 = document.createElement('i');
                     i2.className = "material-icons right";
 
                     i2.textContent="close";
-                    
+
                     var elem9 = elem9.appendChild(i2);
 
                     var br = document.createElement('br');
@@ -703,7 +703,7 @@
                     p1.innerHTML = "No hay informacion disponible.";
 
                     var elem10 = elem8.appendChild(p1);
-                    
+
                     var p2 = document.createElement('p');
 
                     var elem11 = elem8.appendChild(p2);
@@ -725,20 +725,20 @@
 
                     var li = document.createElement("li");
                     root.appendChild(li);
-                    
+
                     var div1 = document.createElement('div');
                     div1.className = "col s8 offset-s2 m3 offset-m2 l3 offset-l2 xl2 offset-xl1";
-                    
+
                     var elem1 = li.appendChild(div1);
 
                     var div2 = document.createElement('div');
                     div2.className = "card";
 
                     var elem2 = elem1.appendChild(div2);
-                    
+
                     var div3 = document.createElement('div');
                     div3.className = "card-image waves-effect waves-block waves-light";
-                    
+
                     var elem3 = elem2.appendChild(div3);
 
                     var img1 = document.createElement('img');
@@ -757,16 +757,16 @@
                     span1.style.fontSize = "130%";
 
                     span1.textContent=`${childData}`;
-                    
+
                     var elem6 = elem5.appendChild(span1);
 
                     var i1 = document.createElement('i');
                     i1.className = "material-icons right";
 
                     i1.textContent="more_vert";
-                    
+
                     var elem7 = elem6.appendChild(i1);
-                    
+
 
                     var div5 = document.createElement('div');
                     div5.className = "card-reveal";
@@ -779,14 +779,14 @@
                     span2.style.textAlign = "left";
 
                     span2.textContent=`${childData}`;
-                    
+
                     var elem9 = elem8.appendChild(span2);
 
                     var i2 = document.createElement('i');
                     i2.className = "material-icons right";
 
                     i2.textContent="close";
-                    
+
                     var elem9 = elem9.appendChild(i2);
 
                     var br = document.createElement('br');
@@ -798,7 +798,7 @@
                     p1.innerHTML = "No hay informacion disponible.";
 
                     var elem10 = elem8.appendChild(p1);
-                    
+
                     var p2 = document.createElement('p');
 
                     var elem11 = elem8.appendChild(p2);
@@ -810,7 +810,7 @@
                     a1.textContent=`${childData}`;
 
                     var elem12 = elem11.appendChild(a1);
-                    }                    
+                    }
 
                 }
                 });
