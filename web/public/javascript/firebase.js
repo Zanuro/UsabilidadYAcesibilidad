@@ -119,7 +119,7 @@ var filterType = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jp
 
 fileReader.onload = function (event) {
   var image = new Image();
-  
+
   image.onload=function(){
       document.getElementById("img-libro").src=image.src;
       document.getElementById("img-libro").alt=document.getElementById("libro").value;
@@ -148,17 +148,17 @@ fileReader.onload = function (event) {
 
 var loadImageFile = function () {
   var uploadImage = document.getElementById("imagen-libro");
-  
+
   if (uploadImage.files.length === 0) { 
     return; 
   }
-  
+
   var uploadFile = document.getElementById("imagen-libro").files[0];
   if (!filterType.test(uploadFile.type)) {
     alert("Please select a valid image."); 
     return;
   }
-  
+
   fileReader.readAsDataURL(uploadFile);
 }
 
